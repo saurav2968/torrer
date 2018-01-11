@@ -1,0 +1,345 @@
+2018-01-08 00:03:52 =SUPERVISOR REPORT====
+     Supervisor: {local,torrer_sup}
+     Context:    start_error
+     Reason:     {'EXIT',{timeout,[{gproc,await,[{n,l,bootstrap_fsm},2000],[{file,"src/gproc.erl"},{line,662}]},{request_listener,init,0,[{file,"src/request_listener.erl"},{line,20}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,start_children,3,[{file,"supervisor.erl"},{line,348}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,314}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,365}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,333}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}}
+     Offender:   [{pid,undefined},{id,request_listener},{mfargs,{request_listener,start_link,[]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2018-01-08 00:03:52 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.583.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,request_listener,{'EXIT',{timeout,[{gproc,await,[{n,l,bootstrap_fsm},2000],[{file,"src/gproc.erl"},{line,662}]},{request_listener,init,0,[{file,"src/request_listener.erl"},{line,20}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,start_children,3,[{file,"supervisor.erl"},{line,348}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,314}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,365}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,333}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}}}},{torrer_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,134}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [<0.582.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.584.0>,normal}]
+    links: [<0.582.0>,<0.445.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 201
+  neighbours:
+2018-01-08 00:09:24 =SUPERVISOR REPORT====
+     Supervisor: {local,torrer_sup}
+     Context:    start_error
+     Reason:     {'EXIT',{timeout,[{gproc,await,[{n,l,bootstrap_fsm},2000],[{file,"src/gproc.erl"},{line,662}]},{request_listener,init,0,[{file,"src/request_listener.erl"},{line,20}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,start_children,3,[{file,"supervisor.erl"},{line,348}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,314}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,365}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,333}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}}
+     Offender:   [{pid,undefined},{id,request_listener},{mfargs,{request_listener,start_link,[]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2018-01-08 00:09:24 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.583.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,request_listener,{'EXIT',{timeout,[{gproc,await,[{n,l,bootstrap_fsm},2000],[{file,"src/gproc.erl"},{line,662}]},{request_listener,init,0,[{file,"src/request_listener.erl"},{line,20}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,start_children,3,[{file,"supervisor.erl"},{line,348}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,314}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,365}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,333}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}}}},{torrer_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,134}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [<0.582.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.584.0>,normal}]
+    links: [<0.582.0>,<0.445.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 201
+  neighbours:
+2018-01-08 21:38:51 =SUPERVISOR REPORT====
+     Supervisor: {local,torrer_sup}
+     Context:    start_error
+     Reason:     {'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["/home"]},infinity]}}}
+     Offender:   [{pid,undefined},{id,request_listener},{mfargs,{request_listener,start_link,[]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2018-01-08 21:38:51 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.583.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,request_listener,{'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["/home"]},infinity]}}}}},{torrer_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,134}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [<0.582.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.584.0>,normal}]
+    links: [<0.582.0>,<0.447.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 227
+  neighbours:
+2018-01-08 21:47:30 =SUPERVISOR REPORT====
+     Supervisor: {local,torrer_sup}
+     Context:    start_error
+     Reason:     {'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["\"/home\""]},infinity]}}}
+     Offender:   [{pid,undefined},{id,request_listener},{mfargs,{request_listener,start_link,[]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2018-01-08 21:47:30 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.585.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,request_listener,{'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["\"/home\""]},infinity]}}}}},{torrer_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,134}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [<0.584.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.586.0>,normal}]
+    links: [<0.584.0>,<0.447.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 201
+  neighbours:
+2018-01-08 21:50:35 =SUPERVISOR REPORT====
+     Supervisor: {local,torrer_sup}
+     Context:    start_error
+     Reason:     {'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["a"]},infinity]}}}
+     Offender:   [{pid,undefined},{id,request_listener},{mfargs,{request_listener,start_link,[]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2018-01-08 21:50:35 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.585.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,request_listener,{'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["a"]},infinity]}}}}},{torrer_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,134}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [<0.584.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.586.0>,normal}]
+    links: [<0.584.0>,<0.447.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 196
+  neighbours:
+2018-01-08 21:55:40 =SUPERVISOR REPORT====
+     Supervisor: {local,torrer_sup}
+     Context:    start_error
+     Reason:     {'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["\"/home\""]},infinity]}}}
+     Offender:   [{pid,undefined},{id,request_listener},{mfargs,{request_listener,start_link,[]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2018-01-08 21:55:40 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.585.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,request_listener,{'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["\"/home\""]},infinity]}}}}},{torrer_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,134}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [<0.584.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.586.0>,normal}]
+    links: [<0.584.0>,<0.447.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 201
+  neighbours:
+2018-01-08 22:04:52 =SUPERVISOR REPORT====
+     Supervisor: {local,torrer_sup}
+     Context:    start_error
+     Reason:     {'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["\"/home\""]},infinity]}}}
+     Offender:   [{pid,undefined},{id,request_listener},{mfargs,{request_listener,start_link,[]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2018-01-08 22:04:52 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.585.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,request_listener,{'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["\"/home\""]},infinity]}}}}},{torrer_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,134}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [<0.584.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.586.0>,normal}]
+    links: [<0.584.0>,<0.447.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 201
+  neighbours:
+2018-01-08 22:26:52 =SUPERVISOR REPORT====
+     Supervisor: {local,torrer_sup}
+     Context:    start_error
+     Reason:     {'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["\"kkk\""]},infinity]}}}
+     Offender:   [{pid,undefined},{id,request_listener},{mfargs,{request_listener,start_link,[]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2018-01-08 22:26:52 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.585.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,request_listener,{'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["\"kkk\""]},infinity]}}}}},{torrer_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,134}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [<0.584.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.586.0>,normal}]
+    links: [<0.584.0>,<0.447.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 200
+  neighbours:
+2018-01-08 22:39:51 =SUPERVISOR REPORT====
+     Supervisor: {local,torrer_sup}
+     Context:    start_error
+     Reason:     {'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,[["\"home\""]]},infinity]}}}
+     Offender:   [{pid,undefined},{id,request_listener},{mfargs,{request_listener,start_link,[]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2018-01-08 22:39:51 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.585.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,request_listener,{'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,[["\"home\""]]},infinity]}}}}},{torrer_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,134}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [<0.584.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.586.0>,normal}]
+    links: [<0.584.0>,<0.447.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 201
+  neighbours:
+2018-01-08 22:46:35 =SUPERVISOR REPORT====
+     Supervisor: {local,torrer_sup}
+     Context:    start_error
+     Reason:     {'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["\"gg\""]},infinity]}}}
+     Offender:   [{pid,undefined},{id,request_listener},{mfargs,{request_listener,start_link,[]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2018-01-08 22:46:35 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.585.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,request_listener,{'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["\"gg\""]},infinity]}}}}},{torrer_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,134}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [<0.584.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.586.0>,normal}]
+    links: [<0.584.0>,<0.447.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 200
+  neighbours:
+2018-01-08 22:46:48 =SUPERVISOR REPORT====
+     Supervisor: {local,torrer_sup}
+     Context:    start_error
+     Reason:     {'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["gg"]},infinity]}}}
+     Offender:   [{pid,undefined},{id,request_listener},{mfargs,{request_listener,start_link,[]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2018-01-08 22:46:48 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.585.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,request_listener,{'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["gg"]},infinity]}}}}},{torrer_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,134}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [<0.584.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.586.0>,normal}]
+    links: [<0.584.0>,<0.447.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 199
+  neighbours:
+2018-01-08 22:48:40 =SUPERVISOR REPORT====
+     Supervisor: {local,torrer_sup}
+     Context:    start_error
+     Reason:     {'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["hello"]},infinity]}}}
+     Offender:   [{pid,undefined},{id,request_listener},{mfargs,{request_listener,start_link,[]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2018-01-08 22:48:40 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.585.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,request_listener,{'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["hello"]},infinity]}}}}},{torrer_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,134}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [<0.584.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.586.0>,normal}]
+    links: [<0.584.0>,<0.447.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 200
+  neighbours:
+2018-01-08 22:55:17 =SUPERVISOR REPORT====
+     Supervisor: {local,torrer_sup}
+     Context:    start_error
+     Reason:     {'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["gg"]},infinity]}}}
+     Offender:   [{pid,undefined},{id,request_listener},{mfargs,{request_listener,start_link,[]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2018-01-08 22:55:17 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.585.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,request_listener,{'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["gg"]},infinity]}}}}},{torrer_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,134}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [<0.584.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.586.0>,normal}]
+    links: [<0.584.0>,<0.447.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 199
+  neighbours:
+2018-01-08 22:56:08 =SUPERVISOR REPORT====
+     Supervisor: {local,torrer_sup}
+     Context:    start_error
+     Reason:     {'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["ff"]},infinity]}}}
+     Offender:   [{pid,undefined},{id,request_listener},{mfargs,{request_listener,start_link,[]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2018-01-08 22:56:08 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.585.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,request_listener,{'EXIT',{{nodedown,request_fsm_sup},{gen_server,call,[{local,request_fsm_sup},{start_child,["ff"]},infinity]}}}}},{torrer_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,134}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [<0.584.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.586.0>,normal}]
+    links: [<0.584.0>,<0.447.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 199
+  neighbours:
+2018-01-09 23:17:11 =CRASH REPORT====
+  crasher:
+    initial call: request_fsm:init/1
+    pid: <0.648.0>
+    registered_name: request_fsm
+    exception exit: {eisdir,[{gen_statem,parse_event_result,8,[{file,"gen_statem.erl"},{line,1267}]},{gen_statem,loop_event,6,[{file,"gen_statem.erl"},{line,1015}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [request_fsm_sup,torrer_sup,<0.587.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.590.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 1530
+  neighbours:
+2018-01-09 23:17:11 =SUPERVISOR REPORT====
+     Supervisor: {local,request_fsm_sup}
+     Context:    child_terminated
+     Reason:     eisdir
+     Offender:   [{pid,<0.648.0>},{id,requests},{mfargs,{request_fsm,start_link,["/home"]}},{restart_type,transient},{shutdown,1000},{child_type,worker}]
+

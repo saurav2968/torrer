@@ -1,0 +1,2 @@
+We had an issue in call to mnesia:create_schema([node()]) as mnesia was already being specified as app dep in .app file.
+So we had to first shut it down and then call create_schema

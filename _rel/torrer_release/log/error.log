@@ -1,0 +1,4 @@
+2018-01-10 00:00:36.915 [error] <0.640.0>@bencoding:decode:25 Bad starting index 105 in torrent file
+2018-01-10 00:00:47.650 [error] <0.642.0>@bencoding:decode_int:76 Didn't find int in "i789": {badarg,[{erlang,list_to_integer,["i789"],[]},{bencoding,decode_int,1,[{file,"src/bencoding.erl"},{line,74}]},{erl_eval,do_apply,6,[{file,"erl_eval.erl"},{line,674}]},{shell,exprs,7,[{file,"shell.erl"},{line,687}]},{shell,eval_exprs,7,[{file,"shell.erl"},{line,642}]},{shell,eval_loop,3,[{file,"shell.erl"},{line,627}]}]}
+2018-01-10 00:03:33.676 [error] <0.640.0>@bencoding:decode:25 Bad starting index 105 in torrent file
+2018-01-10 00:29:02.648 [error] <0.635.0>@request_fsm:state_validate:122 Error while reading torrent file "/home/saurav/Downloads/test3": enoent

@@ -1,0 +1,39 @@
+=erl_crash_dump:0.3
+Sun Jan  7 03:14:57 2018
+Slogan: erl_child_setup closed
+System version: Erlang/OTP 20 [erts-9.1] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:10] [kernel-poll:false]
+Compiled: Fri Sep 29 07:24:31 2017
+Taints: asn1rt_nif,crypto,dyntrace,erl_tracer,zlib
+Atoms: 24710
+Calling Thread: scheduler:3
+=scheduler:1
+Scheduler Sleep Info Flags: SLEEPING | TSE_SLEEPING | WAITING
+Scheduler Sleep Info Aux Work: 
+Current Port: 
+Run Queue Max Length: 0
+Run Queue High Length: 0
+Run Queue Normal Length: 0
+Run Queue Low Length: 0
+Run Queue Port Length: 0
+Run Queue Flags: OUT_OF_WORK | HALFTIME_OUT_OF_WORK
+Current Process: 
+=scheduler:2
+Scheduler Sleep Info Flags: 
+Scheduler Sleep Info Aux Work: THR_PRGR_LATER_OP
+Current Port: 
+Run Queue Max Length: 0
+Run Queue High Length: 0
+Run Queue Normal Length: 0
+Run Queue Low Length: 0
+Run Queue Port Length: 0
+Run Queue Flags: OUT_OF_WORK | HALFTIME_OUT_OF_WORK | NONEMPTY
+Current Process: 
+=scheduler:3
+Scheduler Sleep Info Flags: 
+Scheduler Sleep Info Aux Work: 
+Current Port: #Port<0.0>
+Run Queue Max Length: 0
+Run Queue High Length: 0
+Run Queue Normal Length: 0
+Run Queue Low Length: 0
+Run Queue Port Length: 0

@@ -1,0 +1,748 @@
+2018-01-10 00:00:36.915 [error] <0.640.0>@bencoding:decode:25 Bad starting index 105 in torrent file
+2018-01-10 00:00:47.650 [error] <0.642.0>@bencoding:decode_int:76 Didn't find int in "i789": {badarg,[{erlang,list_to_integer,["i789"],[]},{bencoding,decode_int,1,[{file,"src/bencoding.erl"},{line,74}]},{erl_eval,do_apply,6,[{file,"erl_eval.erl"},{line,674}]},{shell,exprs,7,[{file,"shell.erl"},{line,687}]},{shell,eval_exprs,7,[{file,"shell.erl"},{line,642}]},{shell,eval_loop,3,[{file,"shell.erl"},{line,627}]}]}
+2018-01-10 00:03:13.686 [info] <0.448.0> Application lager started on node 'torrer@127.0.0.1'
+2018-01-10 00:03:13.686 [info] <0.448.0> Application ranch started on node 'torrer@127.0.0.1'
+2018-01-10 00:03:13.686 [info] <0.448.0> Application gun started on node 'torrer@127.0.0.1'
+2018-01-10 00:03:13.686 [info] <0.587.0>@torrer_app:start:8 Starting torrer...
+2018-01-10 00:03:13.732 [info] <0.448.0> Application mnesia exited with reason: stopped
+2018-01-10 00:03:15.733 [info] <0.588.0>@torrer_sup:init:11 Starting torrer_sup...
+2018-01-10 00:03:15.733 [info] <0.589.0>@bootstrap_fsm:init:70 Starting bootstrap_fsm
+2018-01-10 00:03:15.733 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:115 Starting mnesia and setting up tables
+2018-01-10 00:03:15.733 [info] <0.588.0>@request_fsm_sup:start_link:36 in start_link of request_fsm_sup
+2018-01-10 00:03:15.733 [info] <0.590.0>@request_fsm_sup:init:72 Starting request_fsm_sup...
+2018-01-10 00:03:15.733 [info] <0.588.0>@request_listener:init:19 Starting request_listener...
+2018-01-10 00:03:15.734 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:116 {error,{'torrer@127.0.0.1',{already_exists,'torrer@127.0.0.1'}}}
+2018-01-10 00:03:15.854 [info] <0.448.0> Application mnesia started on node 'torrer@127.0.0.1'
+2018-01-10 00:03:15.854 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:118 {aborted,{already_exists,torrents}}
+2018-01-10 00:03:15.854 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:122 Done with mnesia bootstrap
+2018-01-10 00:03:15.854 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:127 Setting peer id...
+2018-01-10 00:03:15.854 [info] <0.589.0>@db_controller:get_and_update_peer_id:26 Restoring peer id "-TE0101-7bZAxt2AKBK5" from table
+2018-01-10 00:03:15.854 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:133 Restoring torrents...
+2018-01-10 00:03:15.854 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:139 Registering in gproc...
+2018-01-10 00:03:15.855 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:142 Now ready to operate...~n
+2018-01-10 00:03:15.855 [info] <0.588.0>@request_listener:init:22 Bootstrap done with value undefined
+2018-01-10 00:03:33.676 [error] <0.640.0>@bencoding:decode:25 Bad starting index 105 in torrent file
+2018-01-10 00:04:36.056 [info] <0.642.0>@bencoding:decode_int:68 Index of e in int is 5
+2018-01-10 00:04:36.056 [info] <0.642.0>@bencoding:decode_int:75 IntAsString is "789"
+2018-01-10 00:04:42.541 [info] <0.642.0>@bencoding:decode_int:68 Index of e in int is 5
+2018-01-10 00:04:42.541 [info] <0.642.0>@bencoding:decode_int:75 IntAsString is "789"
+2018-01-10 00:08:00.943 [info] <0.448.0> Application lager started on node 'torrer@127.0.0.1'
+2018-01-10 00:08:00.943 [info] <0.448.0> Application ranch started on node 'torrer@127.0.0.1'
+2018-01-10 00:08:00.943 [info] <0.448.0> Application gun started on node 'torrer@127.0.0.1'
+2018-01-10 00:08:00.943 [info] <0.587.0>@torrer_app:start:8 Starting torrer...
+2018-01-10 00:08:00.989 [info] <0.448.0> Application mnesia exited with reason: stopped
+2018-01-10 00:08:02.991 [info] <0.595.0>@torrer_sup:init:11 Starting torrer_sup...
+2018-01-10 00:08:02.991 [info] <0.596.0>@bootstrap_fsm:init:70 Starting bootstrap_fsm
+2018-01-10 00:08:02.991 [info] <0.596.0>@bootstrap_fsm:state_bootstrap:115 Starting mnesia and setting up tables
+2018-01-10 00:08:02.991 [info] <0.595.0>@request_fsm_sup:start_link:36 in start_link of request_fsm_sup
+2018-01-10 00:08:02.991 [info] <0.597.0>@request_fsm_sup:init:72 Starting request_fsm_sup...
+2018-01-10 00:08:02.991 [info] <0.595.0>@request_listener:init:19 Starting request_listener...
+2018-01-10 00:08:02.992 [info] <0.596.0>@bootstrap_fsm:state_bootstrap:116 {error,{'torrer@127.0.0.1',{already_exists,'torrer@127.0.0.1'}}}
+2018-01-10 00:08:03.114 [info] <0.448.0> Application mnesia started on node 'torrer@127.0.0.1'
+2018-01-10 00:08:03.114 [info] <0.596.0>@bootstrap_fsm:state_bootstrap:118 {aborted,{already_exists,torrents}}
+2018-01-10 00:08:03.114 [info] <0.596.0>@bootstrap_fsm:state_bootstrap:122 Done with mnesia bootstrap
+2018-01-10 00:08:03.114 [info] <0.596.0>@bootstrap_fsm:state_bootstrap:127 Setting peer id...
+2018-01-10 00:08:03.115 [info] <0.596.0>@db_controller:get_and_update_peer_id:26 Restoring peer id "-TE0101-7bZAxt2AKBK5" from table
+2018-01-10 00:08:03.115 [info] <0.596.0>@bootstrap_fsm:state_bootstrap:133 Restoring torrents...
+2018-01-10 00:08:03.115 [info] <0.596.0>@bootstrap_fsm:state_bootstrap:139 Registering in gproc...
+2018-01-10 00:08:03.115 [info] <0.596.0>@bootstrap_fsm:state_bootstrap:142 Now ready to operate...~n
+2018-01-10 00:08:03.115 [info] <0.595.0>@request_listener:init:22 Bootstrap done with value undefined
+2018-01-10 00:09:35.551 [info] <0.448.0> Application lager started on node 'torrer@127.0.0.1'
+2018-01-10 00:09:35.551 [info] <0.448.0> Application ranch started on node 'torrer@127.0.0.1'
+2018-01-10 00:09:35.551 [info] <0.448.0> Application gun started on node 'torrer@127.0.0.1'
+2018-01-10 00:09:35.551 [info] <0.587.0>@torrer_app:start:8 Starting torrer...
+2018-01-10 00:09:35.607 [info] <0.448.0> Application mnesia exited with reason: stopped
+2018-01-10 00:09:37.608 [info] <0.588.0>@torrer_sup:init:11 Starting torrer_sup...
+2018-01-10 00:09:37.608 [info] <0.589.0>@bootstrap_fsm:init:70 Starting bootstrap_fsm
+2018-01-10 00:09:37.609 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:115 Starting mnesia and setting up tables
+2018-01-10 00:09:37.609 [info] <0.588.0>@request_fsm_sup:start_link:36 in start_link of request_fsm_sup
+2018-01-10 00:09:37.609 [info] <0.590.0>@request_fsm_sup:init:72 Starting request_fsm_sup...
+2018-01-10 00:09:37.609 [info] <0.588.0>@request_listener:init:19 Starting request_listener...
+2018-01-10 00:09:37.610 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:116 {error,{'torrer@127.0.0.1',{already_exists,'torrer@127.0.0.1'}}}
+2018-01-10 00:09:37.719 [info] <0.448.0> Application mnesia started on node 'torrer@127.0.0.1'
+2018-01-10 00:09:37.719 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:118 {aborted,{already_exists,torrents}}
+2018-01-10 00:09:37.719 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:122 Done with mnesia bootstrap
+2018-01-10 00:09:37.719 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:127 Setting peer id...
+2018-01-10 00:09:37.719 [info] <0.589.0>@db_controller:get_and_update_peer_id:26 Restoring peer id "-TE0101-7bZAxt2AKBK5" from table
+2018-01-10 00:09:37.719 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:133 Restoring torrents...
+2018-01-10 00:09:37.719 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:139 Registering in gproc...
+2018-01-10 00:09:37.719 [info] <0.588.0>@request_listener:init:22 Bootstrap done with value undefined
+2018-01-10 00:09:37.719 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:142 Now ready to operate...~n
+2018-01-10 00:10:29.485 [info] <0.640.0>@bencoding:decode_int:68 Index of e in int is 4
+2018-01-10 00:10:29.485 [info] <0.640.0>@bencoding:decode_int:75 IntAsString is "34"
+2018-01-10 00:11:09.704 [info] <0.640.0>@bencoding:decode_int:68 Index of e in int is 3
+2018-01-10 00:11:09.704 [info] <0.640.0>@bencoding:decode_int:75 IntAsString is "3"
+2018-01-10 00:13:44.032 [info] <0.448.0> Application lager started on node 'torrer@127.0.0.1'
+2018-01-10 00:13:44.032 [info] <0.448.0> Application ranch started on node 'torrer@127.0.0.1'
+2018-01-10 00:13:44.032 [info] <0.448.0> Application gun started on node 'torrer@127.0.0.1'
+2018-01-10 00:13:44.032 [info] <0.587.0>@torrer_app:start:8 Starting torrer...
+2018-01-10 00:13:44.074 [info] <0.448.0> Application mnesia exited with reason: stopped
+2018-01-10 00:13:46.075 [info] <0.588.0>@torrer_sup:init:11 Starting torrer_sup...
+2018-01-10 00:13:46.075 [info] <0.589.0>@bootstrap_fsm:init:70 Starting bootstrap_fsm
+2018-01-10 00:13:46.075 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:115 Starting mnesia and setting up tables
+2018-01-10 00:13:46.075 [info] <0.588.0>@request_fsm_sup:start_link:36 in start_link of request_fsm_sup
+2018-01-10 00:13:46.075 [info] <0.590.0>@request_fsm_sup:init:72 Starting request_fsm_sup...
+2018-01-10 00:13:46.075 [info] <0.588.0>@request_listener:init:19 Starting request_listener...
+2018-01-10 00:13:46.077 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:116 {error,{'torrer@127.0.0.1',{already_exists,'torrer@127.0.0.1'}}}
+2018-01-10 00:13:46.184 [info] <0.448.0> Application mnesia started on node 'torrer@127.0.0.1'
+2018-01-10 00:13:46.185 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:118 {aborted,{already_exists,torrents}}
+2018-01-10 00:13:46.185 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:122 Done with mnesia bootstrap
+2018-01-10 00:13:46.185 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:127 Setting peer id...
+2018-01-10 00:13:46.185 [info] <0.589.0>@db_controller:get_and_update_peer_id:26 Restoring peer id "-TE0101-7bZAxt2AKBK5" from table
+2018-01-10 00:13:46.185 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:133 Restoring torrents...
+2018-01-10 00:13:46.185 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:139 Registering in gproc...
+2018-01-10 00:13:46.185 [info] <0.588.0>@request_listener:init:22 Bootstrap done with value undefined
+2018-01-10 00:13:46.185 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:142 Now ready to operate...~n
+2018-01-10 00:13:58.284 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "a"
+2018-01-10 00:13:58.284 [info] <0.640.0>@bencoding:decode_int:70 Index of e in int is 3
+2018-01-10 00:13:58.284 [info] <0.640.0>@bencoding:decode_int:77 IntAsString is "23"
+2018-01-10 00:13:58.284 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: 23
+2018-01-10 00:14:15.045 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "a"
+2018-01-10 00:14:15.045 [info] <0.640.0>@bencoding:decode_int:70 Index of e in int is 3
+2018-01-10 00:14:15.045 [info] <0.640.0>@bencoding:decode_int:77 IntAsString is "23"
+2018-01-10 00:14:15.045 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: 23
+2018-01-10 00:14:15.045 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "we"
+2018-01-10 00:14:15.045 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: "er"
+2018-01-10 00:14:32.676 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "a"
+2018-01-10 00:14:32.676 [info] <0.640.0>@bencoding:decode_int:70 Index of e in int is 3
+2018-01-10 00:14:32.676 [info] <0.640.0>@bencoding:decode_int:77 IntAsString is "23"
+2018-01-10 00:14:32.676 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: 23
+2018-01-10 00:14:32.676 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "we"
+2018-01-10 00:14:32.676 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: "er"
+2018-01-10 00:14:32.676 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "alp"
+2018-01-10 00:14:32.676 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: []
+2018-01-10 00:14:43.805 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "a"
+2018-01-10 00:14:43.805 [info] <0.640.0>@bencoding:decode_int:70 Index of e in int is 3
+2018-01-10 00:14:43.805 [info] <0.640.0>@bencoding:decode_int:77 IntAsString is "23"
+2018-01-10 00:14:43.805 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: 23
+2018-01-10 00:14:43.805 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "we"
+2018-01-10 00:14:43.805 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: "er"
+2018-01-10 00:14:43.805 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "alp"
+2018-01-10 00:14:43.805 [info] <0.640.0>@bencoding:decode_int:70 Index of e in int is 4
+2018-01-10 00:14:43.805 [info] <0.640.0>@bencoding:decode_int:77 IntAsString is "345"
+2018-01-10 00:14:43.805 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: ["wer",345]
+2018-01-10 00:15:14.507 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "a"
+2018-01-10 00:15:14.507 [info] <0.640.0>@bencoding:decode_int:70 Index of e in int is 3
+2018-01-10 00:15:14.507 [info] <0.640.0>@bencoding:decode_int:77 IntAsString is "23"
+2018-01-10 00:15:14.507 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: 23
+2018-01-10 00:15:14.507 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "we"
+2018-01-10 00:15:14.507 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: "er"
+2018-01-10 00:15:14.507 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "alp"
+2018-01-10 00:15:14.508 [info] <0.640.0>@bencoding:decode_int:70 Index of e in int is 4
+2018-01-10 00:15:14.508 [info] <0.640.0>@bencoding:decode_int:77 IntAsString is "345"
+2018-01-10 00:15:14.508 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: ["wer",345]
+2018-01-10 00:15:14.508 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "ert"
+2018-01-10 00:15:14.508 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: #{}
+2018-01-10 00:15:27.064 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "a"
+2018-01-10 00:15:27.064 [info] <0.640.0>@bencoding:decode_int:70 Index of e in int is 3
+2018-01-10 00:15:27.064 [info] <0.640.0>@bencoding:decode_int:77 IntAsString is "23"
+2018-01-10 00:15:27.064 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: 23
+2018-01-10 00:15:27.064 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "we"
+2018-01-10 00:15:27.064 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: "er"
+2018-01-10 00:15:27.064 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "alp"
+2018-01-10 00:15:27.064 [info] <0.640.0>@bencoding:decode_int:70 Index of e in int is 4
+2018-01-10 00:15:27.064 [info] <0.640.0>@bencoding:decode_int:77 IntAsString is "345"
+2018-01-10 00:15:27.064 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: ["wer",345]
+2018-01-10 00:15:27.064 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "ert"
+2018-01-10 00:15:27.064 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "we"
+2018-01-10 00:15:27.064 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: "ert"
+2018-01-10 00:15:27.064 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: #{"we" => "ert"}
+2018-01-10 00:15:55.129 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "a"
+2018-01-10 00:15:55.129 [info] <0.640.0>@bencoding:decode_int:70 Index of e in int is 3
+2018-01-10 00:15:55.130 [info] <0.640.0>@bencoding:decode_int:77 IntAsString is "23"
+2018-01-10 00:15:55.130 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: 23
+2018-01-10 00:15:55.130 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "we"
+2018-01-10 00:15:55.130 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: "er"
+2018-01-10 00:15:55.130 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "alp"
+2018-01-10 00:15:55.130 [info] <0.640.0>@bencoding:decode_int:70 Index of e in int is 4
+2018-01-10 00:15:55.130 [info] <0.640.0>@bencoding:decode_int:77 IntAsString is "345"
+2018-01-10 00:15:55.130 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: ["wer",345]
+2018-01-10 00:15:55.130 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "ert"
+2018-01-10 00:15:55.130 [info] <0.640.0>@bencoding:decode_dict:50 Key in dict "we"
+2018-01-10 00:15:55.130 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: "ert"
+2018-01-10 00:15:55.130 [info] <0.640.0>@bencoding:decode_dict:52 Value for key: #{"we" => "ert"}
+2018-01-10 00:16:35.563 [info] <0.650.0>@request_fsm:init:68 Starting request_fsm for "/home/saurav/Downloads/test1.TORRENT"
+2018-01-10 00:16:35.564 [info] <0.650.0>@request_fsm:init:70 Registered request "/home/saurav/Downloads/test1.TORRENT" in gproc
+2018-01-10 00:16:35.564 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "announce"
+2018-01-10 00:16:35.564 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: "udp://tracker.coppersurfer.tk:6969/announce"
+2018-01-10 00:16:35.564 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "announce-list"
+2018-01-10 00:16:35.565 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: [["udp://tracker.coppersurfer.tk:6969/announce"],["udp://tracker.opentrackr.org:1337/announce"],["udp://inferno.demonoid.pw:3391/announce"],["udp://tracker.leechers-paradise.org:6969/announce"],["udp://www.eddie4.nl:6969/announce"],["http://tracker1.wasabii.com.tw:6969/announce"],["udp://9.rarbg.com:2710/announce"],["udp://shadowshq.yi.org:6969/announce"],["udp://62.138.0.158/announce"],["udp://62.138.0.158:80/announce"],["udp://74.82.52.209:6969/announce"],["udp://151.80.120.112:2710/announce"],["udp://185.82.216.90:1337/announce"],["udp://tracker.coppersurfer.tk:80/announce"],["udp://tracker.coppersurfer.tk:1337/announce"],["udp://tracker.internetwarriors.net:1337/announce"],["udp://tracker.pirateparty.gr:6969/announce"],["udp://tracker.tiny-vps.com:6969/announce"],["http://tracker.vanitycore.co:6969/announce"],["udp://tracker.zer0day.to:1337/announce"]]
+2018-01-10 00:16:35.565 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "created by"
+2018-01-10 00:16:35.565 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: "uTorrent/3100"
+2018-01-10 00:16:35.566 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "creation date"
+2018-01-10 00:16:35.566 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 11
+2018-01-10 00:16:35.566 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "1515476737"
+2018-01-10 00:16:35.566 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 1515476737
+2018-01-10 00:16:35.566 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "encoding"
+2018-01-10 00:16:35.566 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: "UTF-8"
+2018-01-10 00:16:35.566 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "info"
+2018-01-10 00:16:35.566 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "files"
+2018-01-10 00:16:35.566 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.566 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 9
+2018-01-10 00:16:35.566 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "12009113"
+2018-01-10 00:16:35.567 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 12009113
+2018-01-10 00:16:35.567 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.567 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["3D Artist 115 - 2018  UK.pdf"]
+2018-01-10 00:16:35.567 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.567 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 9
+2018-01-10 00:16:35.567 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "23649567"
+2018-01-10 00:16:35.567 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 23649567
+2018-01-10 00:16:35.567 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.567 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["BBC The Doctor Who Yearbook - 2018  UK.pdf"]
+2018-01-10 00:16:35.567 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.567 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 9
+2018-01-10 00:16:35.567 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "10739732"
+2018-01-10 00:16:35.568 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 10739732
+2018-01-10 00:16:35.568 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.568 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["Combat Aircraft - February 2018  UK.pdf"]
+2018-01-10 00:16:35.568 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.568 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 9
+2018-01-10 00:16:35.568 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "13969097"
+2018-01-10 00:16:35.568 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 13969097
+2018-01-10 00:16:35.571 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.571 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["Cosmopolitan - February 2018  USA.pdf"]
+2018-01-10 00:16:35.571 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.571 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 9
+2018-01-10 00:16:35.571 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "12999928"
+2018-01-10 00:16:35.571 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 12999928
+2018-01-10 00:16:35.571 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.571 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["Digital SLR Photography - February 2018  UK.pdf"]
+2018-01-10 00:16:35.571 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.571 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 9
+2018-01-10 00:16:35.571 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "12442677"
+2018-01-10 00:16:35.571 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 12442677
+2018-01-10 00:16:35.571 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.571 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["duPont Registry - February 2018  USA.pdf"]
+2018-01-10 00:16:35.571 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.572 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 9
+2018-01-10 00:16:35.572 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "13172957"
+2018-01-10 00:16:35.572 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 13172957
+2018-01-10 00:16:35.572 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.572 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["Esquire - Winter 2018  USA.pdf"]
+2018-01-10 00:16:35.572 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.572 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:16:35.572 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "5588299"
+2018-01-10 00:16:35.572 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 5588299
+2018-01-10 00:16:35.572 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.572 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["Fortean Times - January 2018  UK.pdf"]
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "5612720"
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 5612720
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["iCreate 181 - 2018  UK.pdf"]
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "9977885"
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 9977885
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["iD (Ideas & Discoveries) - March 2018.pdf"]
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 2
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "0"
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 0
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["Links","Torrent Downloaded from 1337x.to.txt"]
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 4
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "249"
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 249
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["Links","Torrent Downloaded from bt-scene.cc.txt"]
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 3
+2018-01-10 00:16:35.574 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "83"
+2018-01-10 00:16:35.575 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 83
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["Links","Torrent Downloaded from DNoid.me.txt"]
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 4
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "237"
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 237
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["Links","Torrent Downloaded from Glodls.to.txt"]
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 3
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "28"
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 28
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["Links","Torrent Downloaded from Worldwidetorrents.me.txt"]
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 9
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "13913609"
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 13913609
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["Maxim - February 2018  USA.pdf"]
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "7481641"
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 7481641
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.576 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["Men's Fitness - February 2018  AU.pdf"]
+2018-01-10 00:16:35.577 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.577 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:16:35.577 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "8005485"
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 8005485
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["Men's Health - February 2018  AU.pdf"]
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "5415201"
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 5415201
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["Penthouse Letters - February 2018  USA.pdf"]
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "4848231"
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 4848231
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["People - January 8, 2018  AU.pdf"]
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "8944074"
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 8944074
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["PhotoPlus - February 2018  UK.pdf"]
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:16:35.578 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "7193067"
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 7193067
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["Prevention - March 2018  AU.pdf"]
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "9357045"
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 9357045
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["SFX - February 2018  UK.pdf"]
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "5978664"
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 5978664
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["Stuff - February 2018  UK.pdf"]
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "9019215"
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 9019215
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["TECH - February 2018  ZA.pdf"]
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:16:35.580 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "7698369"
+2018-01-10 00:16:35.581 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 7698369
+2018-01-10 00:16:35.581 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.581 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["Truck Trend - March 2018  USA.pdf"]
+2018-01-10 00:16:35.581 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.581 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:16:35.581 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "5893954"
+2018-01-10 00:16:35.581 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 5893954
+2018-01-10 00:16:35.581 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.581 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["Windows Help & Advice - February 2018  UK.pdf"]
+2018-01-10 00:16:35.581 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:16:35.581 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:16:35.581 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "7603480"
+2018-01-10 00:16:35.581 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 7603480
+2018-01-10 00:16:35.581 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:16:35.581 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: ["Women's Health - February 2018  AU.pdf"]
+2018-01-10 00:16:35.581 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: [#{"length" => 12009113,"path" => ["3D Artist 115 - 2018  UK.pdf"]},#{"length" => 23649567,"path" => ["BBC The Doctor Who Yearbook - 2018  UK.pdf"]},#{"length" => 10739732,"path" => ["Combat Aircraft - February 2018  UK.pdf"]},#{"length" => 13969097,"path" => ["Cosmopolitan - February 2018  USA.pdf"]},#{"length" => 12999928,"path" => ["Digital SLR Photography - February 2018  UK.pdf"]},#{"length" => 12442677,"path" => ["duPont Registry - February 2018  USA.pdf"]},#{"length" => 13172957,"path" => ["Esquire - Winter 2018  USA.pdf"]},#{"length" => 5588299,"path" => ["Fortean Times - January 2018  UK.pdf"]},#{"length" => 5612720,"path" => ["iCreate 181 - 2018  UK.pdf"]},#{"length" => 9977885,"path" => ["iD (Ideas & Discoveries) - March 2018.pdf"]},#{"length" => 0,"path" => ["Links","Torrent Downloaded from 1337x.to.txt"]},#{"length" => 249,"path" => ["Links","Torrent Downloaded from bt-scene.cc.txt"]},#{"length" => 83,"path" => ["Links","Torrent Downloaded from DNoid.me.txt"]},#{"length" => 237,"path" => ["Links","Torrent Downloaded from Glodls.to.txt"]},#{"length" => 28,"path" => ["Links","Torrent Downloaded from Worldwidetorrents.me.txt"]},#{"length" => 13913609,"path" => ["Maxim - February 2018  USA.pdf"]},#{"length" => 7481641,"path" => ["Men's Fitness - February 2018  AU.pdf"]},#{"length" => 8005485,"path" => ["Men's Health - February 2018  AU.pdf"]},#{"length" => 5415201,"path" => ["Penthouse Letters - February 2018  USA.pdf"]},#{"length" => 4848231,"path" => ["People - January 8, 2018  AU.pdf"]},#{"length" => 8944074,"path" => ["PhotoPlus - February 2018  UK.pdf"]},#{"length" => 7193067,"path" => ["Prevention - March 2018  AU.pdf"]},#{"length" => 9357045,"path" => ["SFX - February 2018  UK.pdf"]},#{"length" => 5978664,"path" => ["Stuff - February 2018  UK.pdf"]},#{"length" => 9019215,"path" => ["TECH - February 2018  ZA.pdf"]},#{"length" => 7698369,"path" => ["Truck Trend - March 2018  USA.pdf"]},#{"length" => 5893954,"path" => ["Windows Help & Advice - February 2018  UK.pdf"]},#{"length" => 7603480,"path" => ["Women's Health - February 2018  AU.pdf"]}]
+2018-01-10 00:16:35.582 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "name"
+2018-01-10 00:16:35.582 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: "Assorted Magazines - January 9 2018 (True PDF)"
+2018-01-10 00:16:35.582 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "piece length"
+2018-01-10 00:16:35.582 [info] <0.650.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:16:35.582 [info] <0.650.0>@bencoding:decode_int:77 IntAsString is "8388608"
+2018-01-10 00:16:35.582 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: 8388608
+2018-01-10 00:16:35.582 [info] <0.650.0>@bencoding:decode_dict:50 Key in dict "pieces"
+2018-01-10 00:16:35.582 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: [139,178,122,154,90,23,147,209,55,39,97,89,199,130,23,96,137,23,230,77,98,237,239,99,234,250,139,186,218,251,101,194,24,175,140,185,160,54,156,183,97,10,98,28,18,157,17,148,42,2,61,148,208,170,138,103,155,97,222,129,81,230,196,90,33,155,108,166,71,149,47,80,123,224,100,239,99,70,81,67,248,223,23,68,15,247,141,45,82,144,98,22,68,39,49,173,175,198,224,206,127,184,95,184,210,8,214,126,192,30,174,254,21,76,18,194,129,51,32,14,169,239,170,211,235,4,76,10,114,38,93,53,255,226,51,245,39,6,254,85,48,142,102,39,234,167,216,126,138,167,108,25,45,33,103,88,251,212,124,233,82,125,173,238,65,108,84,169,128,230,55,68,95,137,8,36,16,135,37,87,78,199,106,99,118,190,77,224,12,148,116,11,132,25,4,179,255,57,116,218,234,177,141,21,230,14,36,217,81,19,105,73,199,5,125,96,105,47,102,5,220,235,133,197,99,219,84,107,54,65,240,13,99,131,222,176,250,140,66,105,195,197,182,222,135,101,240,195,18,111,138,77,138,140,128,181,91,177,224,219,181,8,196,186,180,130,135,144,10,9,175,57,3,26,21,160,158,46,76,242,237,241,30,235,7,127,216,158,47,13,235,101,234,206,87,76,160,135,249,228,192,129,114,56,130,20,112,62,129,144,13,192,153,173,41,67,162,53,48,189,226,53,102,134,30,20,151,185,50,52,209,155,152,225,239,82,42,135,111,201,192,81,238,113,110,89,73,191,244,196,48,228,204,199,225,211,137,131,239,20,147,167,168,162,40,15,115,182,128,79,235,168,190,148,68,9,129,117,155,224,113,216,83,141,239,76,150,134,180,59,186,156,184,197,124,232,237,31,2,82,10,124,85,181,215,7,210,194,29,241,57,71,45,135,245,60,47,164,107,247,99,90,18,108,252,43,222,235,94,164,181,245,2,18,121,37,69,128,132,24,41,168,114,229,252,146,220,2,1,157,69,43,58,77,153,216,252,30,88,102,187,188,87,52,58,175,224,141,236,42,166,233,165,74,91,154,131,223,103,163,44,230,65,151,67,100,231,226,195,53,217,109,59,23,143,248,83,125,31,6,124,34,79,108,239,48,131,190,230,237,20,219,237,6,213,65,198,233,255,104,218,27,178,46,157,155,97,7,166,156,25,7,158,230,216,147,29,133,254,10]
+2018-01-10 00:16:35.583 [info] <0.650.0>@bencoding:decode_dict:52 Value for key: #{"files" => [#{"length" => 12009113,"path" => ["3D Artist 115 - 2018  UK.pdf"]},#{"length" => 23649567,"path" => ["BBC The Doctor Who Yearbook - 2018  UK.pdf"]},#{"length" => 10739732,"path" => ["Combat Aircraft - February 2018  UK.pdf"]},#{"length" => 13969097,"path" => ["Cosmopolitan - February 2018  USA.pdf"]},#{"length" => 12999928,"path" => ["Digital SLR Photography - February 2018  UK.pdf"]},#{"length" => 12442677,"path" => ["duPont Registry - February 2018  USA.pdf"]},#{"length" => 13172957,"path" => ["Esquire - Winter 2018  USA.pdf"]},#{"length" => 5588299,"path" => ["Fortean Times - January 2018  UK.pdf"]},#{"length" => 5612720,"path" => ["iCreate 181 - 2018  UK.pdf"]},#{"length" => 9977885,"path" => ["iD (Ideas & Discoveries) - March 2018.pdf"]},#{"length" => 0,"path" => ["Links","Torrent Downloaded from 1337x.to.txt"]},#{"length" => 249,"path" => ["Links","Torrent Downloaded from bt-scene.cc.txt"]},#{"length" => 83,"path" => ["Links","Torrent Downloaded from DNoid.me.txt"]},#{"length" => 237,"path" => ["Links","Torrent Downloaded from Glodls.to.txt"]},#{"length" => 28,"path" => ["Links","Torrent Downloaded from Worldwidetorrents.me.txt"]},#{"length" => 13913609,"path" => ["Maxim - February 2018  USA.pdf"]},#{"length" => 7481641,"path" => ["Men's Fitness - February 2018  AU.pdf"]},#{"length" => 8005485,"path" => ["Men's Health - February 2018  AU.pdf"]},#{"length" => 5415201,"path" => ["Penthouse Letters - February 2018  USA.pdf"]},#{"length" => 4848231,"path" => ["People - January 8, 2018  AU.pdf"]},#{"length" => 8944074,"path" => ["PhotoPlus - February 2018  UK.pdf"]},#{"length" => 7193067,"path" => ["Prevention - March 2018  AU.pdf"]},#{"length" => 9357045,"path" => ["SFX - February 2018  UK.pdf"]},#{"length" => 5978664,"path" => ["Stuff - February 2018  UK.pdf"]},#{"length" => 9019215,"path" => ["TECH - February 2018  ZA.pdf"]},#{"length" => 7698369,"path" => ["Truck Trend - March 2018  USA.pdf"]},#{"length" => 5893954,"path" => ["Windows Help & Advice - February 2018  UK.pdf"]},#{"length" => 7603480,"path" => ["Women's Health - February 2018  AU.pdf"]}],"name" => "Assorted Magazines - January 9 2018 (True PDF)","piece length" => 8388608,"pieces" => [139,178,122,154,90,23,147,209,55,39,97,89,199,130,23,96,137,23,230,77,98,237,239,99,234,250,139,186,218,251,101,194,24,175,140,185,160,54,156,183,97,10,98,28,18,157,17,148,42,2,61,148,208,170,138,103,155,97,222,129,81,230,196,90,33,155,108,166,71,149,47,80,123,224,100,239,99,70,81,67,248,223,23,68,15,247,141,45,82,144,98,22,68,39,49,173,175,198,224,206,127,184,95,184,210,8,214,126,192,30,174,254,21,76,18,194,129,51,32,14,169,239,170,211,235,4,76,10,114,38,93,53,255,226,51,245,39,6,254,85,48,142,102,39,234,167,216,126,138,167,108,25,45,33,103,88,251,212,124,233,82,125,173,238,65,108,84,169,128,230,55,68,95,137,8,36,16,135,37,87,78,199,106,99,118,190,77,224,12,148,116,11,132,25,4,179,255,57,116,218,234,177,141,21,230,14,36,217,81,19,105,73,199,5,125,96,105,47,102,5,220,235,133,197,99,219,84,107,54,65,240,13,99,131,222,176,250,140,66,105,195,197,182,222,135,101,240,195,18,111,138,77,138,140,128,181,91,177,224,219,181,8,196,186,180,130,135,144,10,9,175,57,3,26,21,160,158,46,76,242,237,241,30,235,7,127,216,158,47,13,235,101,234,206,87,76,160,135,249,228,192,129,114,56,130,20,112,62,129,144,13,192,153,173,41,67,162,53,48,189,226,53,102,134,30,20,151,185,50,52,209,155,152,225,239,82,42,135,111,201,192,81,238,113,110,89,73,191,244,196,48,228,204,199,225,211,137,131,239,20,147,167,168,162,40,15,115,182,128,79,235,168,190,148,68,9,129,117,155,224,113,216,83,141,239,76,150,134,180,59,186,156,184,197,124,232,237,31,2,82,10,124,85,181,215,7,210,194,29,241,57,71,45,135,245,60,47,164,107,247,99,90,18,108,252,43,222,235,94,164,181,245,2,18,121,37,69,128,132,24,41,168,114,229,252,146,220,2,1,157,69,43,58,77,153,216,252,30,88,102,187,188,87,52,58,175,224,141,236,42,166,233,165,74,91,154,131,223,103,163,44,230,65,151,67,100,231,226,195,53,217,109,59,23,143,248,83,125,31,6,124,34,79,108,239,48,131,190,230,237,20,219,237,6,213,65,198,233,255,104,...]}
+2018-01-10 00:17:35.460 [info] <0.448.0> Application lager started on node 'torrer@127.0.0.1'
+2018-01-10 00:17:35.460 [info] <0.448.0> Application ranch started on node 'torrer@127.0.0.1'
+2018-01-10 00:17:35.461 [info] <0.448.0> Application gun started on node 'torrer@127.0.0.1'
+2018-01-10 00:17:35.461 [info] <0.587.0>@torrer_app:start:8 Starting torrer...
+2018-01-10 00:17:35.506 [info] <0.448.0> Application mnesia exited with reason: stopped
+2018-01-10 00:17:37.507 [info] <0.588.0>@torrer_sup:init:11 Starting torrer_sup...
+2018-01-10 00:17:37.507 [info] <0.589.0>@bootstrap_fsm:init:70 Starting bootstrap_fsm
+2018-01-10 00:17:37.507 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:115 Starting mnesia and setting up tables
+2018-01-10 00:17:37.507 [info] <0.588.0>@request_fsm_sup:start_link:36 in start_link of request_fsm_sup
+2018-01-10 00:17:37.507 [info] <0.590.0>@request_fsm_sup:init:72 Starting request_fsm_sup...
+2018-01-10 00:17:37.507 [info] <0.588.0>@request_listener:init:19 Starting request_listener...
+2018-01-10 00:17:37.509 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:116 {error,{'torrer@127.0.0.1',{already_exists,'torrer@127.0.0.1'}}}
+2018-01-10 00:17:37.606 [info] <0.448.0> Application mnesia started on node 'torrer@127.0.0.1'
+2018-01-10 00:17:37.606 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:118 {aborted,{already_exists,torrents}}
+2018-01-10 00:17:37.607 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:122 Done with mnesia bootstrap
+2018-01-10 00:17:37.607 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:127 Setting peer id...
+2018-01-10 00:17:37.607 [info] <0.589.0>@db_controller:get_and_update_peer_id:26 Restoring peer id "-TE0101-7bZAxt2AKBK5" from table
+2018-01-10 00:17:37.607 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:133 Restoring torrents...
+2018-01-10 00:17:37.607 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:139 Registering in gproc...
+2018-01-10 00:17:37.607 [info] <0.588.0>@request_listener:init:22 Bootstrap done with value undefined
+2018-01-10 00:17:37.607 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:142 Now ready to operate...~n
+2018-01-10 00:17:51.368 [info] <0.635.0>@request_fsm:init:68 Starting request_fsm for "/home/saurav/Downloads/test1.TORRENT"
+2018-01-10 00:17:51.368 [info] <0.635.0>@request_fsm:init:70 Registered request "/home/saurav/Downloads/test1.TORRENT" in gproc
+2018-01-10 00:17:51.368 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "announce"
+2018-01-10 00:17:51.368 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: "udp://tracker.coppersurfer.tk:6969/announce"
+2018-01-10 00:17:51.368 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "announce-list"
+2018-01-10 00:17:51.368 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: [["udp://tracker.coppersurfer.tk:6969/announce"],["udp://tracker.opentrackr.org:1337/announce"],["udp://inferno.demonoid.pw:3391/announce"],["udp://tracker.leechers-paradise.org:6969/announce"],["udp://www.eddie4.nl:6969/announce"],["http://tracker1.wasabii.com.tw:6969/announce"],["udp://9.rarbg.com:2710/announce"],["udp://shadowshq.yi.org:6969/announce"],["udp://62.138.0.158/announce"],["udp://62.138.0.158:80/announce"],["udp://74.82.52.209:6969/announce"],["udp://151.80.120.112:2710/announce"],["udp://185.82.216.90:1337/announce"],["udp://tracker.coppersurfer.tk:80/announce"],["udp://tracker.coppersurfer.tk:1337/announce"],["udp://tracker.internetwarriors.net:1337/announce"],["udp://tracker.pirateparty.gr:6969/announce"],["udp://tracker.tiny-vps.com:6969/announce"],["http://tracker.vanitycore.co:6969/announce"],["udp://tracker.zer0day.to:1337/announce"]]
+2018-01-10 00:17:51.368 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "created by"
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: "uTorrent/3100"
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "creation date"
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 11
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "1515476737"
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 1515476737
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "encoding"
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: "UTF-8"
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "info"
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "files"
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 9
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "12009113"
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 12009113
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["3D Artist 115 - 2018  UK.pdf"]
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 9
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "23649567"
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 23649567
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.369 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["BBC The Doctor Who Yearbook - 2018  UK.pdf"]
+2018-01-10 00:17:51.370 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.370 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 9
+2018-01-10 00:17:51.370 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "10739732"
+2018-01-10 00:17:51.370 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 10739732
+2018-01-10 00:17:51.370 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["Combat Aircraft - February 2018  UK.pdf"]
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 9
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "13969097"
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 13969097
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["Cosmopolitan - February 2018  USA.pdf"]
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 9
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "12999928"
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 12999928
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["Digital SLR Photography - February 2018  UK.pdf"]
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 9
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "12442677"
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 12442677
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["duPont Registry - February 2018  USA.pdf"]
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 9
+2018-01-10 00:17:51.371 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "13172957"
+2018-01-10 00:17:51.372 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 13172957
+2018-01-10 00:17:51.372 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.372 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["Esquire - Winter 2018  USA.pdf"]
+2018-01-10 00:17:51.372 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.372 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:17:51.372 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "5588299"
+2018-01-10 00:17:51.372 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 5588299
+2018-01-10 00:17:51.372 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.372 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["Fortean Times - January 2018  UK.pdf"]
+2018-01-10 00:17:51.372 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.372 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:17:51.372 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "5612720"
+2018-01-10 00:17:51.372 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 5612720
+2018-01-10 00:17:51.372 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.372 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["iCreate 181 - 2018  UK.pdf"]
+2018-01-10 00:17:51.372 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.373 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:17:51.373 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "9977885"
+2018-01-10 00:17:51.373 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 9977885
+2018-01-10 00:17:51.373 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.373 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["iD (Ideas & Discoveries) - March 2018.pdf"]
+2018-01-10 00:17:51.373 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.373 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 2
+2018-01-10 00:17:51.373 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "0"
+2018-01-10 00:17:51.373 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 0
+2018-01-10 00:17:51.373 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.373 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["Links","Torrent Downloaded from 1337x.to.txt"]
+2018-01-10 00:17:51.375 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.375 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 4
+2018-01-10 00:17:51.375 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "249"
+2018-01-10 00:17:51.375 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 249
+2018-01-10 00:17:51.375 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.375 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["Links","Torrent Downloaded from bt-scene.cc.txt"]
+2018-01-10 00:17:51.375 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.375 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 3
+2018-01-10 00:17:51.375 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "83"
+2018-01-10 00:17:51.375 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 83
+2018-01-10 00:17:51.375 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.375 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["Links","Torrent Downloaded from DNoid.me.txt"]
+2018-01-10 00:17:51.376 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.376 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 4
+2018-01-10 00:17:51.376 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "237"
+2018-01-10 00:17:51.376 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 237
+2018-01-10 00:17:51.376 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.376 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["Links","Torrent Downloaded from Glodls.to.txt"]
+2018-01-10 00:17:51.376 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.376 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 3
+2018-01-10 00:17:51.376 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "28"
+2018-01-10 00:17:51.376 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 28
+2018-01-10 00:17:51.376 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.376 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["Links","Torrent Downloaded from Worldwidetorrents.me.txt"]
+2018-01-10 00:17:51.376 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.376 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 9
+2018-01-10 00:17:51.378 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "13913609"
+2018-01-10 00:17:51.379 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 13913609
+2018-01-10 00:17:51.379 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.379 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["Maxim - February 2018  USA.pdf"]
+2018-01-10 00:17:51.379 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.379 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:17:51.379 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "7481641"
+2018-01-10 00:17:51.379 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 7481641
+2018-01-10 00:17:51.379 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.379 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["Men's Fitness - February 2018  AU.pdf"]
+2018-01-10 00:17:51.379 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.379 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:17:51.379 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "8005485"
+2018-01-10 00:17:51.379 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 8005485
+2018-01-10 00:17:51.379 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.379 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["Men's Health - February 2018  AU.pdf"]
+2018-01-10 00:17:51.379 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.379 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:17:51.380 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "5415201"
+2018-01-10 00:17:51.380 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 5415201
+2018-01-10 00:17:51.380 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.380 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["Penthouse Letters - February 2018  USA.pdf"]
+2018-01-10 00:17:51.380 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.380 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:17:51.380 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "4848231"
+2018-01-10 00:17:51.380 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 4848231
+2018-01-10 00:17:51.380 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["People - January 8, 2018  AU.pdf"]
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "8944074"
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 8944074
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["PhotoPlus - February 2018  UK.pdf"]
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "7193067"
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 7193067
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["Prevention - March 2018  AU.pdf"]
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "9357045"
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 9357045
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["SFX - February 2018  UK.pdf"]
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "5978664"
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 5978664
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["Stuff - February 2018  UK.pdf"]
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.382 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "9019215"
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 9019215
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["TECH - February 2018  ZA.pdf"]
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "7698369"
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 7698369
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["Truck Trend - March 2018  USA.pdf"]
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "5893954"
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 5893954
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["Windows Help & Advice - February 2018  UK.pdf"]
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "length"
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "7603480"
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 7603480
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "path"
+2018-01-10 00:17:51.383 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: ["Women's Health - February 2018  AU.pdf"]
+2018-01-10 00:17:51.384 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: [#{"length" => 12009113,"path" => ["3D Artist 115 - 2018  UK.pdf"]},#{"length" => 23649567,"path" => ["BBC The Doctor Who Yearbook - 2018  UK.pdf"]},#{"length" => 10739732,"path" => ["Combat Aircraft - February 2018  UK.pdf"]},#{"length" => 13969097,"path" => ["Cosmopolitan - February 2018  USA.pdf"]},#{"length" => 12999928,"path" => ["Digital SLR Photography - February 2018  UK.pdf"]},#{"length" => 12442677,"path" => ["duPont Registry - February 2018  USA.pdf"]},#{"length" => 13172957,"path" => ["Esquire - Winter 2018  USA.pdf"]},#{"length" => 5588299,"path" => ["Fortean Times - January 2018  UK.pdf"]},#{"length" => 5612720,"path" => ["iCreate 181 - 2018  UK.pdf"]},#{"length" => 9977885,"path" => ["iD (Ideas & Discoveries) - March 2018.pdf"]},#{"length" => 0,"path" => ["Links","Torrent Downloaded from 1337x.to.txt"]},#{"length" => 249,"path" => ["Links","Torrent Downloaded from bt-scene.cc.txt"]},#{"length" => 83,"path" => ["Links","Torrent Downloaded from DNoid.me.txt"]},#{"length" => 237,"path" => ["Links","Torrent Downloaded from Glodls.to.txt"]},#{"length" => 28,"path" => ["Links","Torrent Downloaded from Worldwidetorrents.me.txt"]},#{"length" => 13913609,"path" => ["Maxim - February 2018  USA.pdf"]},#{"length" => 7481641,"path" => ["Men's Fitness - February 2018  AU.pdf"]},#{"length" => 8005485,"path" => ["Men's Health - February 2018  AU.pdf"]},#{"length" => 5415201,"path" => ["Penthouse Letters - February 2018  USA.pdf"]},#{"length" => 4848231,"path" => ["People - January 8, 2018  AU.pdf"]},#{"length" => 8944074,"path" => ["PhotoPlus - February 2018  UK.pdf"]},#{"length" => 7193067,"path" => ["Prevention - March 2018  AU.pdf"]},#{"length" => 9357045,"path" => ["SFX - February 2018  UK.pdf"]},#{"length" => 5978664,"path" => ["Stuff - February 2018  UK.pdf"]},#{"length" => 9019215,"path" => ["TECH - February 2018  ZA.pdf"]},#{"length" => 7698369,"path" => ["Truck Trend - March 2018  USA.pdf"]},#{"length" => 5893954,"path" => ["Windows Help & Advice - February 2018  UK.pdf"]},#{"length" => 7603480,"path" => ["Women's Health - February 2018  AU.pdf"]}]
+2018-01-10 00:17:51.384 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "name"
+2018-01-10 00:17:51.384 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: "Assorted Magazines - January 9 2018 (True PDF)"
+2018-01-10 00:17:51.384 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "piece length"
+2018-01-10 00:17:51.384 [info] <0.635.0>@bencoding:decode_int:70 Index of e in int is 8
+2018-01-10 00:17:51.384 [info] <0.635.0>@bencoding:decode_int:77 IntAsString is "8388608"
+2018-01-10 00:17:51.384 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: 8388608
+2018-01-10 00:17:51.384 [info] <0.635.0>@bencoding:decode_dict:50 Key in dict "pieces"
+2018-01-10 00:17:51.384 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: [139,178,122,154,90,23,147,209,55,39,97,89,199,130,23,96,137,23,230,77,98,237,239,99,234,250,139,186,218,251,101,194,24,175,140,185,160,54,156,183,97,10,98,28,18,157,17,148,42,2,61,148,208,170,138,103,155,97,222,129,81,230,196,90,33,155,108,166,71,149,47,80,123,224,100,239,99,70,81,67,248,223,23,68,15,247,141,45,82,144,98,22,68,39,49,173,175,198,224,206,127,184,95,184,210,8,214,126,192,30,174,254,21,76,18,194,129,51,32,14,169,239,170,211,235,4,76,10,114,38,93,53,255,226,51,245,39,6,254,85,48,142,102,39,234,167,216,126,138,167,108,25,45,33,103,88,251,212,124,233,82,125,173,238,65,108,84,169,128,230,55,68,95,137,8,36,16,135,37,87,78,199,106,99,118,190,77,224,12,148,116,11,132,25,4,179,255,57,116,218,234,177,141,21,230,14,36,217,81,19,105,73,199,5,125,96,105,47,102,5,220,235,133,197,99,219,84,107,54,65,240,13,99,131,222,176,250,140,66,105,195,197,182,222,135,101,240,195,18,111,138,77,138,140,128,181,91,177,224,219,181,8,196,186,180,130,135,144,10,9,175,57,3,26,21,160,158,46,76,242,237,241,30,235,7,127,216,158,47,13,235,101,234,206,87,76,160,135,249,228,192,129,114,56,130,20,112,62,129,144,13,192,153,173,41,67,162,53,48,189,226,53,102,134,30,20,151,185,50,52,209,155,152,225,239,82,42,135,111,201,192,81,238,113,110,89,73,191,244,196,48,228,204,199,225,211,137,131,239,20,147,167,168,162,40,15,115,182,128,79,235,168,190,148,68,9,129,117,155,224,113,216,83,141,239,76,150,134,180,59,186,156,184,197,124,232,237,31,2,82,10,124,85,181,215,7,210,194,29,241,57,71,45,135,245,60,47,164,107,247,99,90,18,108,252,43,222,235,94,164,181,245,2,18,121,37,69,128,132,24,41,168,114,229,252,146,220,2,1,157,69,43,58,77,153,216,252,30,88,102,187,188,87,52,58,175,224,141,236,42,166,233,165,74,91,154,131,223,103,163,44,230,65,151,67,100,231,226,195,53,217,109,59,23,143,248,83,125,31,6,124,34,79,108,239,48,131,190,230,237,20,219,237,6,213,65,198,233,255,104,218,27,178,46,157,155,97,7,166,156,25,7,158,230,216,147,29,133,254,10]
+2018-01-10 00:17:51.385 [info] <0.635.0>@bencoding:decode_dict:52 Value for key: #{"files" => [#{"length" => 12009113,"path" => ["3D Artist 115 - 2018  UK.pdf"]},#{"length" => 23649567,"path" => ["BBC The Doctor Who Yearbook - 2018  UK.pdf"]},#{"length" => 10739732,"path" => ["Combat Aircraft - February 2018  UK.pdf"]},#{"length" => 13969097,"path" => ["Cosmopolitan - February 2018  USA.pdf"]},#{"length" => 12999928,"path" => ["Digital SLR Photography - February 2018  UK.pdf"]},#{"length" => 12442677,"path" => ["duPont Registry - February 2018  USA.pdf"]},#{"length" => 13172957,"path" => ["Esquire - Winter 2018  USA.pdf"]},#{"length" => 5588299,"path" => ["Fortean Times - January 2018  UK.pdf"]},#{"length" => 5612720,"path" => ["iCreate 181 - 2018  UK.pdf"]},#{"length" => 9977885,"path" => ["iD (Ideas & Discoveries) - March 2018.pdf"]},#{"length" => 0,"path" => ["Links","Torrent Downloaded from 1337x.to.txt"]},#{"length" => 249,"path" => ["Links","Torrent Downloaded from bt-scene.cc.txt"]},#{"length" => 83,"path" => ["Links","Torrent Downloaded from DNoid.me.txt"]},#{"length" => 237,"path" => ["Links","Torrent Downloaded from Glodls.to.txt"]},#{"length" => 28,"path" => ["Links","Torrent Downloaded from Worldwidetorrents.me.txt"]},#{"length" => 13913609,"path" => ["Maxim - February 2018  USA.pdf"]},#{"length" => 7481641,"path" => ["Men's Fitness - February 2018  AU.pdf"]},#{"length" => 8005485,"path" => ["Men's Health - February 2018  AU.pdf"]},#{"length" => 5415201,"path" => ["Penthouse Letters - February 2018  USA.pdf"]},#{"length" => 4848231,"path" => ["People - January 8, 2018  AU.pdf"]},#{"length" => 8944074,"path" => ["PhotoPlus - February 2018  UK.pdf"]},#{"length" => 7193067,"path" => ["Prevention - March 2018  AU.pdf"]},#{"length" => 9357045,"path" => ["SFX - February 2018  UK.pdf"]},#{"length" => 5978664,"path" => ["Stuff - February 2018  UK.pdf"]},#{"length" => 9019215,"path" => ["TECH - February 2018  ZA.pdf"]},#{"length" => 7698369,"path" => ["Truck Trend - March 2018  USA.pdf"]},#{"length" => 5893954,"path" => ["Windows Help & Advice - February 2018  UK.pdf"]},#{"length" => 7603480,"path" => ["Women's Health - February 2018  AU.pdf"]}],"name" => "Assorted Magazines - January 9 2018 (True PDF)","piece length" => 8388608,"pieces" => [139,178,122,154,90,23,147,209,55,39,97,89,199,130,23,96,137,23,230,77,98,237,239,99,234,250,139,186,218,251,101,194,24,175,140,185,160,54,156,183,97,10,98,28,18,157,17,148,42,2,61,148,208,170,138,103,155,97,222,129,81,230,196,90,33,155,108,166,71,149,47,80,123,224,100,239,99,70,81,67,248,223,23,68,15,247,141,45,82,144,98,22,68,39,49,173,175,198,224,206,127,184,95,184,210,8,214,126,192,30,174,254,21,76,18,194,129,51,32,14,169,239,170,211,235,4,76,10,114,38,93,53,255,226,51,245,39,6,254,85,48,142,102,39,234,167,216,126,138,167,108,25,45,33,103,88,251,212,124,233,82,125,173,238,65,108,84,169,128,230,55,68,95,137,8,36,16,135,37,87,78,199,106,99,118,190,77,224,12,148,116,11,132,25,4,179,255,57,116,218,234,177,141,21,230,14,36,217,81,19,105,73,199,5,125,96,105,47,102,5,220,235,133,197,99,219,84,107,54,65,240,13,99,131,222,176,250,140,66,105,195,197,182,222,135,101,240,195,18,111,138,77,138,140,128,181,91,177,224,219,181,8,196,186,180,130,135,144,10,9,175,57,3,26,21,160,158,46,76,242,237,241,30,235,7,127,216,158,47,13,235,101,234,206,87,76,160,135,249,228,192,129,114,56,130,20,112,62,129,144,13,192,153,173,41,67,162,53,48,189,226,53,102,134,30,20,151,185,50,52,209,155,152,225,239,82,42,135,111,201,192,81,238,113,110,89,73,191,244,196,48,228,204,199,225,211,137,131,239,20,147,167,168,162,40,15,115,182,128,79,235,168,190,148,68,9,129,117,155,224,113,216,83,141,239,76,150,134,180,59,186,156,184,197,124,232,237,31,2,82,10,124,85,181,215,7,210,194,29,241,57,71,45,135,245,60,47,164,107,247,99,90,18,108,252,43,222,235,94,164,181,245,2,18,121,37,69,128,132,24,41,168,114,229,252,146,220,2,1,157,69,43,58,77,153,216,252,30,88,102,187,188,87,52,58,175,224,141,236,42,166,233,165,74,91,154,131,223,103,163,44,230,65,151,67,100,231,226,195,53,217,109,59,23,143,248,83,125,31,6,124,34,79,108,239,48,131,190,230,237,20,219,237,6,213,65,198,233,255,104,...]}
+2018-01-10 00:17:51.385 [info] <0.635.0>@request_fsm:state_validate:115 Decoded torrent file as: {#{"announce" => "udp://tracker.coppersurfer.tk:6969/announce","announce-list" => [["udp://tracker.coppersurfer.tk:6969/announce"],["udp://tracker.opentrackr.org:1337/announce"],["udp://inferno.demonoid.pw:3391/announce"],["udp://tracker.leechers-paradise.org:6969/announce"],["udp://www.eddie4.nl:6969/announce"],["http://tracker1.wasabii.com.tw:6969/announce"],["udp://9.rarbg.com:2710/announce"],["udp://shadowshq.yi.org:6969/announce"],["udp://62.138.0.158/announce"],["udp://62.138.0.158:80/announce"],["udp://74.82.52.209:6969/announce"],["udp://151.80.120.112:2710/announce"],["udp://185.82.216.90:1337/announce"],["udp://tracker.coppersurfer.tk:80/announce"],["udp://tracker.coppersurfer.tk:1337/announce"],["udp://tracker.internetwarriors.net:1337/announce"],["udp://tracker.pirateparty.gr:6969/announce"],["udp://tracker.tiny-vps.com:6969/announce"],["http://tracker.vanitycore.co:6969/announce"],["udp://tracker.zer0day.to:1337/announce"]],"created by" => "uTorrent/3100","creation date" => 1515476737,"encoding" => "UTF-8","info" => #{"files" => [#{"length" => 12009113,"path" => ["3D Artist 115 - 2018  UK.pdf"]},#{"length" => 23649567,"path" => ["BBC The Doctor Who Yearbook - 2018  UK.pdf"]},#{"length" => 10739732,"path" => ["Combat Aircraft - February 2018  UK.pdf"]},#{"length" => 13969097,"path" => ["Cosmopolitan - February 2018  USA.pdf"]},#{"length" => 12999928,"path" => ["Digital SLR Photography - February 2018  UK.pdf"]},#{"length" => 12442677,"path" => ["duPont Registry - February 2018  USA.pdf"]},#{"length" => 13172957,"path" => ["Esquire - Winter 2018  USA.pdf"]},#{"length" => 5588299,"path" => ["Fortean Times - January 2018  UK.pdf"]},#{"length" => 5612720,"path" => ["iCreate 181 - 2018  UK.pdf"]},#{"length" => 9977885,"path" => ["iD (Ideas & Discoveries) - March 2018.pdf"]},#{"length" => 0,"path" => ["Links","Torrent Downloaded from 1337x.to.txt"]},#{"length" => 249,"path" => ["Links","Torrent Downloaded from bt-scene.cc.txt"]},#{"length" => 83,"path" => ["Links","Torrent Downloaded from DNoid.me.txt"]},#{"length" => 237,"path" => ["Links","Torrent Downloaded from Glodls.to.txt"]},#{"length" => 28,"path" => ["Links","Torrent Downloaded from Worldwidetorrents.me.txt"]},#{"length" => 13913609,"path" => ["Maxim - February 2018  USA.pdf"]},#{"length" => 7481641,"path" => ["Men's Fitness - February 2018  AU.pdf"]},#{"length" => 8005485,"path" => ["Men's Health - February 2018  AU.pdf"]},#{"length" => 5415201,"path" => ["Penthouse Letters - February 2018  USA.pdf"]},#{"length" => 4848231,"path" => ["People - January 8, 2018  AU.pdf"]},#{"length" => 8944074,"path" => ["PhotoPlus - February 2018  UK.pdf"]},#{"length" => 7193067,"path" => ["Prevention - March 2018  AU.pdf"]},#{"length" => 9357045,"path" => ["SFX - February 2018  UK.pdf"]},#{"length" => 5978664,"path" => ["Stuff - February 2018  UK.pdf"]},#{"length" => 9019215,"path" => ["TECH - February 2018  ZA.pdf"]},#{"length" => 7698369,"path" => ["Truck Trend - March 2018  USA.pdf"]},#{"length" => 5893954,"path" => ["Windows Help & Advice - February 2018  UK.pdf"]},#{"length" => 7603480,"path" => ["Women's Health - February 2018  AU.pdf"]}],"name" => "Assorted Magazines - January 9 2018 (True PDF)","piece length" => 8388608,"pieces" => [139,178,122,154,90,23,147,209,55,39,97,89,199,130,23,96,137,23,230,77,98,237,239,99,234,250,139,186,218,251,101,194,24,175,140,185,160,54,156,183,97,10,98,28,18,157,17,148,42,2,61,148,208,170,138,103,155,97,222,129,81,230,196,90,33,155,108,166,71,149,47,80,123,224,100,239,99,70,81,67,248,223,23,68,15,247,141,45,82,144,98,22,68,39,49,173,175,198,224,206,127,184,95,184,210,8,214,126,192,30,174,254,21,76,18,194,129,51,32,14,169,239,170,211,235,4,76,10,114,38,93,53,255,226,51,245,39,6,254,85,48,142,102,39,234,167,216,126,138,167,108,25,45,33,103,88,251,212,124,233,82,125,173,238,65,108,84,169,128,230,55,68,95,137,8,36,16,135,37,87,78,199,106,99,118,190,77,224,12,148,116,11,132,25,4,179,255,57,116,218,234,177,141,21,230,14,36,217,81,19,105,73,199,5,125,96,105,47,102,5,220,235,133,197,...]}},...}
+2018-01-10 00:23:40.614 [info] <0.448.0> Application lager started on node 'torrer@127.0.0.1'
+2018-01-10 00:23:40.614 [info] <0.448.0> Application ranch started on node 'torrer@127.0.0.1'
+2018-01-10 00:23:40.614 [info] <0.448.0> Application gun started on node 'torrer@127.0.0.1'
+2018-01-10 00:23:40.614 [info] <0.587.0>@torrer_app:start:8 Starting torrer...
+2018-01-10 00:23:40.659 [info] <0.448.0> Application mnesia exited with reason: stopped
+2018-01-10 00:23:42.660 [info] <0.588.0>@torrer_sup:init:11 Starting torrer_sup...
+2018-01-10 00:23:42.660 [info] <0.589.0>@bootstrap_fsm:init:70 Starting bootstrap_fsm
+2018-01-10 00:23:42.660 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:115 Starting mnesia and setting up tables
+2018-01-10 00:23:42.660 [info] <0.588.0>@request_fsm_sup:start_link:36 in start_link of request_fsm_sup
+2018-01-10 00:23:42.660 [info] <0.590.0>@request_fsm_sup:init:72 Starting request_fsm_sup...
+2018-01-10 00:23:42.660 [info] <0.588.0>@request_listener:init:19 Starting request_listener...
+2018-01-10 00:23:42.661 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:116 {error,{'torrer@127.0.0.1',{already_exists,'torrer@127.0.0.1'}}}
+2018-01-10 00:23:42.792 [info] <0.448.0> Application mnesia started on node 'torrer@127.0.0.1'
+2018-01-10 00:23:42.792 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:118 {aborted,{already_exists,torrents}}
+2018-01-10 00:23:42.792 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:122 Done with mnesia bootstrap
+2018-01-10 00:23:42.792 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:127 Setting peer id...
+2018-01-10 00:23:42.792 [info] <0.589.0>@db_controller:get_and_update_peer_id:26 Restoring peer id "-TE0101-7bZAxt2AKBK5" from table
+2018-01-10 00:23:42.792 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:133 Restoring torrents...
+2018-01-10 00:23:42.792 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:139 Registering in gproc...
+2018-01-10 00:23:42.793 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:142 Now ready to operate...~n
+2018-01-10 00:23:42.793 [info] <0.588.0>@request_listener:init:22 Bootstrap done with value undefined
+2018-01-10 00:24:07.888 [info] <0.635.0>@request_fsm:init:68 Starting request_fsm for "/home/saurav/Downloads/test2.TORRENT"
+2018-01-10 00:24:07.888 [info] <0.635.0>@request_fsm:init:70 Registered request "/home/saurav/Downloads/test2.TORRENT" in gproc
+2018-01-10 00:24:07.888 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "announce"
+2018-01-10 00:24:07.888 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: "udp://tracker.opentrackr.org:1337/announce"
+2018-01-10 00:24:07.888 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "announce-list"
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: [["udp://inferno.demonoid.pw:3399/announce"],["udp://tracker.opentrackr.org:1337/announce"],["udp://9.rarbg.me:2710/announce"],["udp://9.rarbg.com:2710/announce"],["udp://shadowshq.yi.org:6969/announce"],["udp://p4p.arenabg.com:1337/announce"],["udp://ipv4.tracker.harry.lu:80/announce"],["udp://tracker.leechers-paradise.org:6969/announce"],["udp://tracker.eddie4.nl:6969/announce"],["udp://shadowshq.eddie4.nl:6969/announce"],["udp://tracker.coppersurfer.tk:80/announce"],["udp://tracker.coppersurfer.tk:6969/announce"],["udp://9.rarbg.me:2780/announce"],["udp://9.rarbg.to:2710/announce"],["udp://p4p.arenabg.ch:1337/announce"]]
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "comment"
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: "Seed Til Ya Bleed!!!!!!!"
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "created by"
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: "ruTorrent (PHP Class - Adrien Gibrat)"
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "creation date"
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_int:54 Index of e in int is 11
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_int:61 IntAsString is "1515474869"
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: 1515474869
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "info"
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "length"
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_int:54 Index of e in int is 11
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_int:61 IntAsString is "1543287287"
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: 1543287287
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "name"
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: "WWE.RAW.2018.01.08.HDTV.x264-Ebi..mp4"
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "piece length"
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_int:54 Index of e in int is 9
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_int:61 IntAsString is "16777216"
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: 16777216
+2018-01-10 00:24:07.889 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "pieces"
+2018-01-10 00:24:07.890 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: [252,120,72,36,83,160,202,14,8,158,138,55,74,147,222,53,171,32,230,55,254,71,49,35,161,138,66,220,248,252,181,232,164,138,50,10,236,52,144,25,55,242,88,7,245,157,56,104,130,20,67,10,17,160,85,156,160,240,16,89,237,240,137,69,88,72,149,244,47,166,240,70,158,55,56,88,98,68,10,188,150,12,19,93,78,186,208,194,36,31,145,186,222,95,144,234,195,116,123,186,81,127,147,25,48,218,101,40,2,158,180,250,45,75,121,177,65,98,13,111,230,231,237,222,197,135,235,206,165,255,146,246,68,212,248,127,207,112,54,201,227,110,250,33,155,66,117,219,96,85,46,187,94,152,248,155,240,148,38,200,237,190,208,212,172,186,80,245,29,68,45,153,23,224,24,141,24,218,69,114,125,51,12,183,137,110,105,211,50,212,242,120,227,28,152,229,147,69,64,37,68,109,48,9,195,116,185,213,83,119,144,228,106,76,9,43,98,72,28,155,48,45,146,197,173,96,161,191,157,224,96,225,39,74,56,157,197,95,211,146,114,20,1,189,0,111,166,19,71,116,69,176,130,97,4,77,70,232,39,79,105,217,9,44,71,150,17,206,143,219,82,92,162,195,127,237,68,179,68,223,169,207,53,248,53,7,165,207,134,95,175,4,188,137,240,82,114,91,100,103,18,193,106,106,136,40,76,248,204,236,205,168,223,147,27,190,219,27,127,104,248,169,223,58,123,9,252,103,198,10,183,215,81,167,228,163,233,53,114,249,9,51,48,133,118,84,181,156,140,220,104,131,25,68,158,104,239,216,64,23,109,32,12,197,183,181,124,217,1,42,240,138,125,57,134,39,109,65,126,143,182,64,109,226,196,97,116,114,178,126,134,202,154,133,33,198,162,151,145,0,128,52,199,206,15,68,96,177,185,193,71,194,162,122,72,37,39,38,187,82,97,153,89,153,6,65,30,15,89,126,129,201,6,0,83,144,3,85,241,118,247,172,89,24,80,28,128,114,157,234,231,44,54,202,94,82,157,218,217,151,111,195,168,109,20,18,216,102,7,97,101,48,42,131,180,87,0,30,147,55,180,95,228,238,38,231,131,135,99,163,200,149,128,206,234,239,73,19,7,26,252,87,251,28,139,146,141,136,50,158,126,10,179,217,206,220,122,55,210,159,129,123,226,67,70,160,176,120,52,196,98,235,32,241,244,77,255,148,98,62,59,40,56,180,152,162,21,232,47,0,95,72,207,166,204,237,120,172,170,141,139,155,186,172,185,244,63,114,57,162,155,121,190,222,116,31,204,152,123,220,109,141,111,199,146,194,96,44,1,63,78,2,240,34,145,164,49,25,117,132,58,25,44,79,84,69,151,87,69,175,23,142,62,97,232,19,224,27,50,254,175,226,198,95,204,239,80,246,97,5,69,236,200,182,214,172,227,173,183,97,253,231,93,105,52,222,170,70,240,143,104,14,24,224,122,180,70,177,3,114,126,26,140,210,189,252,149,195,80,249,243,123,25,92,207,67,19,50,121,187,36,116,94,33,20,62,53,39,159,64,223,220,138,71,254,224,102,55,23,178,94,65,56,151,9,114,217,3,47,149,106,28,207,87,168,82,80,224,253,53,217,137,126,29,78,91,207,180,1,206,233,89,57,161,186,31,2,78,105,255,116,5,11,88,95,44,67,221,198,49,93,26,246,166,242,32,56,184,86,226,6,51,175,26,17,21,246,172,244,175,138,65,176,160,43,182,18,49,135,51,250,151,102,124,223,169,164,8,132,23,85,187,185,171,21,135,152,249,95,248,126,113,227,220,151,138,183,240,4,158,188,233,251,137,22,163,183,80,67,120,109,84,63,161,116,18,191,228,77,106,104,16,146,232,57,168,140,100,144,84,4,170,84,11,168,92,54,37,174,218,62,40,107,88,235,75,161,80,252,56,107,129,111,62,43,202,143,87,121,79,95,138,204,190,84,209,45,107,113,215,186,30,78,90,185,0,151,186,205,232,230,164,131,110,74,70,239,111,71,60,35,65,109,236,238,237,1,92,175,18,186,191,133,172,254,5,76,73,111,184,142,21,140,251,195,72,113,110,160,228,5,44,17,0,100,161,185,149,134,48,225,70,72,123,138,23,241,172,235,220,187,61,17,104,43,133,69,22,196,117,145,91,78,215,167,196,89,203,252,212,12,14,192,173,99,198,42,107,155,255,73,103,248,109,62,135,232,17,120,215,64,80,216,123,188,74,182,25,205,17,99,108,65,197,66,196,45,143,115,187,222,221,221,135,219,66,188,23,175,110,148,236,129,64,163,188,100,148,34,100,205,93,69,143,241,219,219,132,253,157,237,80,120,116,135,96,144,3,246,101,247,75,83,59,52,162,139,242,9,106,255,9,57,0,9,139,14,23,100,114,23,126,207,185,168,81,240,84,18,42,244,122,109,26,70,177,224,30,253,89,118,154,219,221,50,237,85,39,214,168,221,175,233,122,13,81,248,227,135,159,178,147,68,126,8,29,71,241,58,163,104,26,187,208,63,127,140,235,133,128,69,25,57,49,63,158,91,3,175,177,58,1,...]
+2018-01-10 00:24:07.890 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: #{"length" => 1543287287,"name" => "WWE.RAW.2018.01.08.HDTV.x264-Ebi..mp4","piece length" => 16777216,"pieces" => [252,120,72,36,83,160,202,14,8,158,138,55,74,147,222,53,171,32,230,55,254,71,49,35,161,138,66,220,248,252,181,232,164,138,50,10,236,52,144,25,55,242,88,7,245,157,56,104,130,20,67,10,17,160,85,156,160,240,16,89,237,240,137,69,88,72,149,244,47,166,240,70,158,55,56,88,98,68,10,188,150,12,19,93,78,186,208,194,36,31,145,186,222,95,144,234,195,116,123,186,81,127,147,25,48,218,101,40,2,158,180,250,45,75,121,177,65,98,13,111,230,231,237,222,197,135,235,206,165,255,146,246,68,212,248,127,207,112,54,201,227,110,250,33,155,66,117,219,96,85,46,187,94,152,248,155,240,148,38,200,237,190,208,212,172,186,80,245,29,68,45,153,23,224,24,141,24,218,69,114,125,51,12,183,137,110,105,211,50,212,242,120,227,28,152,229,147,69,64,37,68,109,48,9,195,116,185,213,83,119,144,228,106,76,9,43,98,72,28,155,48,45,146,197,173,96,161,191,157,224,96,225,39,74,56,157,197,95,211,146,114,20,1,189,0,111,166,19,71,116,69,176,130,97,4,77,70,232,39,79,105,217,9,44,71,150,17,206,143,219,82,92,162,195,127,237,68,179,68,223,169,207,53,248,53,7,165,207,134,95,175,4,188,137,240,82,114,91,100,103,18,193,106,106,136,40,76,248,204,236,205,168,223,147,27,190,219,27,127,104,248,169,223,58,123,9,252,103,198,10,183,215,81,167,228,163,233,53,114,249,9,51,48,133,118,84,181,156,140,220,104,131,25,68,158,104,239,216,64,23,109,32,12,197,183,181,124,217,1,42,240,138,125,57,134,39,109,65,126,143,182,64,109,226,196,97,116,114,178,126,134,202,154,133,33,198,162,151,145,0,128,52,199,206,15,68,96,177,185,193,71,194,162,122,72,37,39,38,187,82,97,153,89,153,6,65,30,15,89,126,129,201,6,0,83,144,3,85,241,118,247,172,89,24,80,28,128,114,157,234,231,44,54,202,94,82,157,218,217,151,111,195,168,109,20,18,216,102,7,97,101,48,42,131,180,87,0,30,147,55,180,95,228,238,38,231,131,135,99,163,200,149,128,206,234,239,73,19,7,26,252,87,251,28,139,146,141,136,50,158,126,10,179,217,206,220,122,55,210,159,129,123,226,67,70,160,176,120,52,196,98,235,32,241,244,77,255,148,98,62,59,40,56,180,152,162,21,232,47,0,95,72,207,166,204,237,120,172,170,141,139,155,186,172,185,244,63,114,57,162,155,121,190,222,116,31,204,152,123,220,109,141,111,199,146,194,96,44,1,63,78,2,240,34,145,164,49,25,117,132,58,25,44,79,84,69,151,87,69,175,23,142,62,97,232,19,224,27,50,254,175,226,198,95,204,239,80,246,97,5,69,236,200,182,214,172,227,173,183,97,253,231,93,105,52,222,170,70,240,143,104,14,24,224,122,180,70,177,3,114,126,26,140,210,189,252,149,195,80,249,243,123,25,92,207,67,19,50,121,187,36,116,94,33,20,62,53,39,159,64,223,220,138,71,254,224,102,55,23,178,94,65,56,151,9,114,217,3,47,149,106,28,207,87,168,82,80,224,253,53,217,137,126,29,78,91,207,180,1,206,233,89,57,161,186,31,2,78,105,255,116,5,11,88,95,44,67,221,198,49,93,26,246,166,242,32,56,184,86,226,6,51,175,26,17,21,246,172,244,175,138,65,176,160,43,182,18,49,135,51,250,151,102,124,223,169,164,8,132,23,85,187,185,171,21,135,152,249,95,248,126,113,227,220,151,138,183,240,4,158,188,233,251,137,22,163,183,80,67,120,109,84,63,161,116,18,191,228,77,106,104,16,146,232,57,168,140,100,144,84,4,170,84,11,168,92,54,37,174,218,62,40,107,88,235,75,161,80,252,56,107,129,111,62,43,202,143,87,121,79,95,138,204,190,84,209,45,107,113,215,186,30,78,90,185,0,151,186,205,232,230,164,131,110,74,70,239,111,71,60,35,65,109,236,238,237,1,92,175,18,186,191,133,172,254,5,76,73,111,184,142,21,140,251,195,72,113,110,160,228,5,44,17,0,100,161,185,149,134,48,225,70,72,123,138,23,241,172,235,220,187,61,17,104,43,133,69,22,196,117,145,91,78,215,167,196,89,203,252,212,12,14,192,173,99,198,42,107,155,255,73,103,248,109,62,135,232,17,120,215,64,80,216,123,188,74,182,25,205,17,99,108,65,197,66,196,45,143,115,187,222,221,221,135,219,66,188,23,175,110,148,236,129,64,163,188,100,148,34,100,205,93,69,143,241,219,219,132,253,157,237,80,120,116,135,96,144,3,246,101,247,75,83,59,52,162,139,242,9,106,255,9,57,0,9,139,14,23,100,114,23,126,207,185,168,81,240,84,18,42,244,122,109,26,70,177,224,30,253,89,118,154,219,221,50,237,85,39,214,168,221,175,233,122,13,81,248,227,135,...]}
+2018-01-10 00:24:07.890 [info] <0.635.0>@request_fsm:state_validate:115 Decoded torrent file as: {#{"announce" => "udp://tracker.opentrackr.org:1337/announce","announce-list" => [["udp://inferno.demonoid.pw:3399/announce"],["udp://tracker.opentrackr.org:1337/announce"],["udp://9.rarbg.me:2710/announce"],["udp://9.rarbg.com:2710/announce"],["udp://shadowshq.yi.org:6969/announce"],["udp://p4p.arenabg.com:1337/announce"],["udp://ipv4.tracker.harry.lu:80/announce"],["udp://tracker.leechers-paradise.org:6969/announce"],["udp://tracker.eddie4.nl:6969/announce"],["udp://shadowshq.eddie4.nl:6969/announce"],["udp://tracker.coppersurfer.tk:80/announce"],["udp://tracker.coppersurfer.tk:6969/announce"],["udp://9.rarbg.me:2780/announce"],["udp://9.rarbg.to:2710/announce"],["udp://p4p.arenabg.ch:1337/announce"]],"comment" => "Seed Til Ya Bleed!!!!!!!","created by" => "ruTorrent (PHP Class - Adrien Gibrat)","creation date" => 1515474869,"info" => #{"length" => 1543287287,"name" => "WWE.RAW.2018.01.08.HDTV.x264-Ebi..mp4","piece length" => 16777216,"pieces" => [252,120,72,36,83,160,202,14,8,158,138,55,74,147,222,53,171,32,230,55,254,71,49,35,161,138,66,220,248,252,181,232,164,138,50,10,236,52,144,25,55,242,88,7,245,157,56,104,130,20,67,10,17,160,85,156,160,240,16,89,237,240,137,69,88,72,149,244,47,166,240,70,158,55,56,88,98,68,10,188,150,12,19,93,78,186,208,194,36,31,145,186,222,95,144,234,195,116,123,186,81,127,147,25,48,218,101,40,2,158,180,250,45,75,121,177,65,98,13,111,230,231,237,222,197,135,235,206,165,255,146,246,68,212,248,127,207,112,54,201,227,110,250,33,155,66,117,219,96,85,46,187,94,152,248,155,240,148,38,200,237,190,208,212,172,186,80,245,29,68,45,153,23,224,24,141,24,218,69,114,125,51,12,183,137,110,105,211,50,212,242,120,227,28,152,229,147,69,64,37,68,109,48,9,195,116,185,213,83,119,144,228,106,76,9,43,98,72,28,155,48,45,146,197,173,96,161,191,157,224,96,225,39,74,56,157,197,95,211,146,114,20,1,189,0,111,166,19,71,116,69,176,130,97,4,77,70,232,39,79,105,217,9,44,71,150,17,206,143,219,82,92,162,195,127,237,68,179,68,223,169,207,53,248,53,7,165,207,134,95,175,4,188,137,240,82,114,91,100,103,18,193,106,106,136,40,76,248,204,236,205,168,223,147,27,190,219,27,127,104,248,169,223,58,123,9,252,103,198,10,183,215,81,167,228,163,233,53,114,249,9,51,48,133,118,84,181,156,140,220,104,131,25,68,158,104,239,216,64,23,109,32,12,197,183,181,124,217,1,42,240,138,125,57,134,39,109,65,126,143,182,64,109,226,196,97,116,114,178,126,134,202,154,133,33,198,162,151,145,0,128,52,199,206,15,68,96,177,185,193,71,194,162,122,72,37,39,38,187,82,97,153,89,153,6,65,30,15,89,126,129,201,6,0,83,144,3,85,241,118,247,172,89,24,80,28,128,114,157,234,231,44,54,202,94,82,157,218,217,151,111,195,168,109,20,18,216,102,7,97,101,48,42,131,180,87,0,30,147,55,180,95,228,238,38,231,131,135,99,163,200,149,128,206,234,239,73,19,7,26,252,87,251,28,139,146,141,136,50,158,126,10,179,217,206,220,122,55,210,159,129,123,226,67,70,160,176,120,52,196,98,235,32,241,244,77,255,148,98,62,59,40,56,180,152,162,21,232,47,0,95,72,207,166,204,237,120,172,170,141,139,155,186,172,185,244,63,114,57,162,155,121,190,222,116,31,204,152,123,220,109,141,111,199,146,194,96,44,1,63,78,2,240,34,145,164,49,25,117,132,58,25,44,79,84,69,151,87,69,175,23,142,62,97,232,19,224,27,50,254,175,226,198,95,204,239,80,246,97,5,69,236,200,182,214,172,227,173,183,97,253,231,93,105,52,222,170,70,240,143,104,14,24,224,122,180,70,177,3,114,126,26,140,210,189,252,149,195,80,249,243,123,25,92,207,67,19,50,121,187,36,116,94,33,20,62,53,39,159,64,223,220,138,71,254,224,102,55,23,178,94,65,56,151,9,114,217,3,47,149,106,28,207,87,168,82,80,224,253,53,217,137,126,29,78,91,207,180,1,206,233,89,57,161,186,31,2,78,105,255,116,5,11,88,95,44,67,221,198,49,93,26,246,166,242,32,56,184,86,226,6,51,175,26,17,21,246,172,244,175,138,65,176,160,43,182,18,49,135,51,250,151,102,124,223,169,164,8,132,23,85,187,185,171,21,135,152,249,95,248,126,113,227,220,151,138,183,240,4,158,188,233,251,137,22,163,183,80,67,120,109,84,63,161,116,18,191,228,77,106,104,16,146,232,57,168,140,100,144,84,4,170,84,11,168,92,54,37,174,218,62,40,107,88,235,75,161,80,252,56,107,129,111,62,43,202,...]}},...}
+2018-01-10 00:25:11.909 [info] <0.448.0> Application lager started on node 'torrer@127.0.0.1'
+2018-01-10 00:25:11.909 [info] <0.448.0> Application ranch started on node 'torrer@127.0.0.1'
+2018-01-10 00:25:11.909 [info] <0.448.0> Application gun started on node 'torrer@127.0.0.1'
+2018-01-10 00:25:11.909 [info] <0.587.0>@torrer_app:start:8 Starting torrer...
+2018-01-10 00:25:11.966 [info] <0.448.0> Application mnesia exited with reason: stopped
+2018-01-10 00:25:13.966 [info] <0.588.0>@torrer_sup:init:11 Starting torrer_sup...
+2018-01-10 00:25:13.966 [info] <0.589.0>@bootstrap_fsm:init:70 Starting bootstrap_fsm
+2018-01-10 00:25:13.966 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:115 Starting mnesia and setting up tables
+2018-01-10 00:25:13.966 [info] <0.588.0>@request_fsm_sup:start_link:36 in start_link of request_fsm_sup
+2018-01-10 00:25:13.966 [info] <0.590.0>@request_fsm_sup:init:72 Starting request_fsm_sup...
+2018-01-10 00:25:13.966 [info] <0.588.0>@request_listener:init:19 Starting request_listener...
+2018-01-10 00:25:13.969 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:116 {error,{'torrer@127.0.0.1',{already_exists,'torrer@127.0.0.1'}}}
+2018-01-10 00:25:14.167 [info] <0.448.0> Application mnesia started on node 'torrer@127.0.0.1'
+2018-01-10 00:25:14.167 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:118 {aborted,{already_exists,torrents}}
+2018-01-10 00:25:14.168 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:122 Done with mnesia bootstrap
+2018-01-10 00:25:14.168 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:127 Setting peer id...
+2018-01-10 00:25:14.168 [info] <0.589.0>@db_controller:get_and_update_peer_id:26 Restoring peer id "-TE0101-7bZAxt2AKBK5" from table
+2018-01-10 00:25:14.168 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:133 Restoring torrents...
+2018-01-10 00:25:14.168 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:139 Registering in gproc...
+2018-01-10 00:25:14.168 [info] <0.588.0>@request_listener:init:22 Bootstrap done with value undefined
+2018-01-10 00:25:14.168 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:142 Now ready to operate...~n
+2018-01-10 00:25:50.854 [info] <0.635.0>@request_fsm:init:68 Starting request_fsm for "/home/saurav/Downloads/test3.TORRENT"
+2018-01-10 00:25:50.854 [info] <0.635.0>@request_fsm:init:70 Registered request "/home/saurav/Downloads/test3.TORRENT" in gproc
+2018-01-10 00:25:50.855 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "announce"
+2018-01-10 00:25:50.855 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: "udp://tracker.coppersurfer.tk:6969/announce"
+2018-01-10 00:25:50.855 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "announce-list"
+2018-01-10 00:25:50.855 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: [["udp://tracker.coppersurfer.tk:6969/announce"],["udp://tracker.ilibr.org:80/announce"],["udp://tracker.ilibr.org:6969/announce"],["udp://tracker.leechers-paradise.org:6969/announce"],["udp://eddie4.nl:6969/announce"],["udp://tracker.opentrackr.org:1337/announce"],["udp://tracker.zer0day.to:1337/announce"],["udp://9.rarbg.to:2750/announce"],["udp://p4p.arenabg.ch:1337/announce"],["udp://p4p.arenabg.com:1337/announce"],["udp://explodie.org:6969/announce"],["udp://ipv4.tracker.harry.lu:80/announce"],["udp://inferno.demonoid.pw:3393/announce"]]
+2018-01-10 00:25:50.855 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "created by"
+2018-01-10 00:25:50.855 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: "uTorrent/3.5.1"
+2018-01-10 00:25:50.855 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "creation date"
+2018-01-10 00:25:50.855 [info] <0.635.0>@bencoding:decode_int:54 Index of e in int is 11
+2018-01-10 00:25:50.855 [info] <0.635.0>@bencoding:decode_int:61 IntAsString is "1515443364"
+2018-01-10 00:25:50.855 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: 1515443364
+2018-01-10 00:25:50.855 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "encoding"
+2018-01-10 00:25:50.855 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: "UTF-8"
+2018-01-10 00:25:50.855 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "info"
+2018-01-10 00:25:50.855 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "files"
+2018-01-10 00:25:50.855 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "length"
+2018-01-10 00:25:50.855 [info] <0.635.0>@bencoding:decode_int:54 Index of e in int is 4
+2018-01-10 00:25:50.855 [info] <0.635.0>@bencoding:decode_int:61 IntAsString is "618"
+2018-01-10 00:25:50.855 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: 618
+2018-01-10 00:25:50.855 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "path"
+2018-01-10 00:25:50.856 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: ["free audiobook version.txt"]
+2018-01-10 00:25:50.856 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "length"
+2018-01-10 00:25:50.856 [info] <0.635.0>@bencoding:decode_int:54 Index of e in int is 8
+2018-01-10 00:25:50.856 [info] <0.635.0>@bencoding:decode_int:61 IntAsString is "2364707"
+2018-01-10 00:25:50.856 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: 2364707
+2018-01-10 00:25:50.856 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "path"
+2018-01-10 00:25:50.856 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: ["The Sleep Book_ How to Sleep Well Every Night by G. Meadows.epub"]
+2018-01-10 00:25:50.856 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: [#{"length" => 618,"path" => ["free audiobook version.txt"]},#{"length" => 2364707,"path" => ["The Sleep Book_ How to Sleep Well Every Night by G. Meadows.epub"]}]
+2018-01-10 00:25:50.856 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "name"
+2018-01-10 00:25:50.856 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: "The Sleep Book_ How to Sleep Well Every Night by G. Meadows EPUB"
+2018-01-10 00:25:50.856 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "piece length"
+2018-01-10 00:25:50.856 [info] <0.635.0>@bencoding:decode_int:54 Index of e in int is 6
+2018-01-10 00:25:50.856 [info] <0.635.0>@bencoding:decode_int:61 IntAsString is "16384"
+2018-01-10 00:25:50.856 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: 16384
+2018-01-10 00:25:50.856 [info] <0.635.0>@bencoding:decode_dict:40 Key in dict "pieces"
+2018-01-10 00:25:50.857 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: [106,229,90,58,173,132,230,189,107,18,134,134,101,130,107,222,235,30,77,150,120,72,196,186,29,39,96,208,165,85,55,104,185,196,152,111,236,87,191,129,129,181,148,168,107,39,93,212,208,30,180,158,80,236,139,14,92,234,5,114,175,173,104,99,238,67,160,22,87,113,35,239,237,42,216,87,231,200,252,136,4,142,214,89,47,243,122,81,167,161,89,143,238,87,7,154,163,195,2,226,115,236,43,134,103,143,95,238,40,240,198,163,218,81,203,215,198,82,150,235,252,207,97,109,134,84,85,89,182,9,30,44,118,16,163,87,59,225,249,191,27,195,200,244,225,98,82,200,63,133,187,183,169,127,158,171,1,54,178,14,50,169,50,130,120,19,30,54,139,30,171,64,19,38,77,165,52,233,119,187,147,124,226,39,215,138,87,173,161,167,86,18,238,164,240,27,170,100,230,18,109,18,172,68,158,33,105,200,81,25,56,64,197,32,2,152,255,49,56,151,194,88,155,81,144,246,11,121,98,27,239,89,148,83,25,60,76,163,190,207,125,226,133,107,116,128,111,155,143,78,141,251,123,83,96,105,8,82,32,210,135,33,110,10,99,105,119,194,144,36,150,6,234,143,236,190,171,37,123,228,23,244,143,137,82,102,47,150,168,186,87,43,246,104,1,211,62,29,69,19,211,217,248,192,161,168,134,119,236,104,9,30,142,204,141,106,10,153,196,231,21,163,185,38,193,140,197,248,50,154,187,93,141,74,103,247,31,164,109,175,112,124,72,125,96,68,188,82,80,190,133,172,229,46,52,201,111,182,136,246,107,96,231,122,236,68,254,64,86,128,169,134,21,243,145,244,207,240,93,63,126,243,12,21,163,202,76,253,99,93,231,46,252,115,121,171,194,113,113,40,237,25,34,234,156,80,211,152,222,96,46,0,62,63,43,104,47,54,159,67,223,2,25,11,233,200,21,80,64,72,238,239,61,82,202,19,73,250,127,25,52,147,17,9,141,187,200,126,16,162,60,200,246,94,237,178,144,198,225,109,2,71,146,169,247,149,106,141,73,220,3,64,169,58,168,96,158,235,117,74,13,35,13,170,190,176,244,15,80,104,156,193,29,110,84,60,0,1,178,119,171,191,152,238,9,132,253,234,158,54,86,173,243,212,128,127,34,223,133,250,35,240,34,125,69,179,118,110,107,126,17,135,186,147,124,31,120,61,140,212,52,250,9,157,11,212,138,99,197,206,164,205,29,186,146,91,78,202,89,134,40,222,54,234,222,154,111,83,100,209,49,209,36,213,7,79,62,187,63,31,190,178,108,73,127,130,105,206,169,40,175,3,133,127,130,229,77,206,19,65,30,187,39,122,136,21,68,104,12,74,13,187,188,226,35,19,223,244,194,16,235,27,219,71,172,22,189,52,27,138,195,252,107,172,48,125,183,28,195,23,202,157,175,87,83,109,200,59,19,132,51,117,2,74,110,201,147,239,55,49,74,114,152,172,163,114,239,198,80,171,30,65,41,238,112,152,236,4,153,90,82,241,48,145,157,0,228,154,252,75,162,170,192,34,20,191,163,14,93,186,141,39,38,88,45,140,92,224,56,225,119,201,115,0,178,207,154,163,233,167,11,205,157,233,106,63,148,71,130,248,45,24,181,40,149,37,39,76,72,185,225,109,218,176,51,11,209,203,156,196,231,74,184,16,148,162,45,220,131,230,98,172,35,104,190,175,152,229,140,189,84,224,136,212,8,101,102,215,149,227,232,250,212,77,204,174,121,92,229,255,114,150,17,48,225,127,186,210,172,76,229,41,106,191,28,100,211,23,107,165,157,217,192,207,178,89,70,178,107,199,150,202,110,113,194,210,95,67,190,69,40,47,26,21,183,180,183,219,106,118,66,195,155,25,178,152,212,139,214,125,54,183,24,91,7,34,71,214,155,132,215,51,2,25,49,13,221,40,195,133,33,137,27,76,14,111,50,208,70,64,81,151,116,108,135,158,30,170,37,80,243,117,109,148,136,131,153,120,115,38,248,214,153,40,98,74,51,228,143,139,214,239,211,33,248,18,71,93,57,153,31,94,50,12,50,14,55,244,64,168,78,157,59,112,113,92,201,4,143,145,33,168,205,109,228,159,150,61,139,62,233,194,61,138,9,220,8,109,109,169,48,91,213,164,249,107,187,6,84,133,251,60,144,28,33,103,170,135,201,24,136,57,189,167,5,55,8,10,170,49,10,85,50,116,104,65,73,69,63,161,209,140,142,95,57,41,182,15,6,118,24,185,135,36,87,103,59,136,193,32,57,24,136,203,241,39,13,242,115,33,120,233,203,211,184,132,147,131,230,41,136,212,57,20,154,39,177,206,40,153,52,101,141,109,45,114,70,177,40,199,183,54,120,184,208,81,31,117,150,113,49,229,187,8,45,25,171,112,147,122,81,46,255,85,54,137,236,228,11,148,205,37,151,161,174,84,142,47,20,209,250,174,78,97,164,6,90,59,205,251,180,62,152,221,160,24,146,225,240,85,83,72,132,64,95,122,78,117,249,35,166,169,98,218,98,152,...]
+2018-01-10 00:25:50.857 [info] <0.635.0>@bencoding:decode_dict:42 Value for key: #{"files" => [#{"length" => 618,"path" => ["free audiobook version.txt"]},#{"length" => 2364707,"path" => ["The Sleep Book_ How to Sleep Well Every Night by G. Meadows.epub"]}],"name" => "The Sleep Book_ How to Sleep Well Every Night by G. Meadows EPUB","piece length" => 16384,"pieces" => [106,229,90,58,173,132,230,189,107,18,134,134,101,130,107,222,235,30,77,150,120,72,196,186,29,39,96,208,165,85,55,104,185,196,152,111,236,87,191,129,129,181,148,168,107,39,93,212,208,30,180,158,80,236,139,14,92,234,5,114,175,173,104,99,238,67,160,22,87,113,35,239,237,42,216,87,231,200,252,136,4,142,214,89,47,243,122,81,167,161,89,143,238,87,7,154,163,195,2,226,115,236,43,134,103,143,95,238,40,240,198,163,218,81,203,215,198,82,150,235,252,207,97,109,134,84,85,89,182,9,30,44,118,16,163,87,59,225,249,191,27,195,200,244,225,98,82,200,63,133,187,183,169,127,158,171,1,54,178,14,50,169,50,130,120,19,30,54,139,30,171,64,19,38,77,165,52,233,119,187,147,124,226,39,215,138,87,173,161,167,86,18,238,164,240,27,170,100,230,18,109,18,172,68,158,33,105,200,81,25,56,64,197,32,2,152,255,49,56,151,194,88,155,81,144,246,11,121,98,27,239,89,148,83,25,60,76,163,190,207,125,226,133,107,116,128,111,155,143,78,141,251,123,83,96,105,8,82,32,210,135,33,110,10,99,105,119,194,144,36,150,6,234,143,236,190,171,37,123,228,23,244,143,137,82,102,47,150,168,186,87,43,246,104,1,211,62,29,69,19,211,217,248,192,161,168,134,119,236,104,9,30,142,204,141,106,10,153,196,231,21,163,185,38,193,140,197,248,50,154,187,93,141,74,103,247,31,164,109,175,112,124,72,125,96,68,188,82,80,190,133,172,229,46,52,201,111,182,136,246,107,96,231,122,236,68,254,64,86,128,169,134,21,243,145,244,207,240,93,63,126,243,12,21,163,202,76,253,99,93,231,46,252,115,121,171,194,113,113,40,237,25,34,234,156,80,211,152,222,96,46,0,62,63,43,104,47,54,159,67,223,2,25,11,233,200,21,80,64,72,238,239,61,82,202,19,73,250,127,25,52,147,17,9,141,187,200,126,16,162,60,200,246,94,237,178,144,198,225,109,2,71,146,169,247,149,106,141,73,220,3,64,169,58,168,96,158,235,117,74,13,35,13,170,190,176,244,15,80,104,156,193,29,110,84,60,0,1,178,119,171,191,152,238,9,132,253,234,158,54,86,173,243,212,128,127,34,223,133,250,35,240,34,125,69,179,118,110,107,126,17,135,186,147,124,31,120,61,140,212,52,250,9,157,11,212,138,99,197,206,164,205,29,186,146,91,78,202,89,134,40,222,54,234,222,154,111,83,100,209,49,209,36,213,7,79,62,187,63,31,190,178,108,73,127,130,105,206,169,40,175,3,133,127,130,229,77,206,19,65,30,187,39,122,136,21,68,104,12,74,13,187,188,226,35,19,223,244,194,16,235,27,219,71,172,22,189,52,27,138,195,252,107,172,48,125,183,28,195,23,202,157,175,87,83,109,200,59,19,132,51,117,2,74,110,201,147,239,55,49,74,114,152,172,163,114,239,198,80,171,30,65,41,238,112,152,236,4,153,90,82,241,48,145,157,0,228,154,252,75,162,170,192,34,20,191,163,14,93,186,141,39,38,88,45,140,92,224,56,225,119,201,115,0,178,207,154,163,233,167,11,205,157,233,106,63,148,71,130,248,45,24,181,40,149,37,39,76,72,185,225,109,218,176,51,11,209,203,156,196,231,74,184,16,148,162,45,220,131,230,98,172,35,104,190,175,152,229,140,189,84,224,136,212,8,101,102,215,149,227,232,250,212,77,204,174,121,92,229,255,114,150,17,48,225,127,186,210,172,76,229,41,106,191,28,100,211,23,107,165,157,217,192,207,178,89,70,178,107,199,150,202,110,113,194,210,95,67,190,69,40,47,26,21,183,180,183,219,106,118,66,195,155,25,178,152,212,139,214,125,54,183,24,91,7,34,71,214,155,132,215,51,2,25,49,13,221,40,195,133,33,137,27,76,14,111,50,208,70,64,81,151,116,108,135,158,30,170,37,80,243,117,109,148,136,131,153,120,115,38,248,214,153,40,98,74,51,228,143,139,214,239,211,33,248,18,71,93,57,153,31,94,50,12,50,14,55,244,64,168,78,157,59,112,113,92,201,4,143,145,33,168,205,109,228,159,150,61,139,62,233,194,61,138,9,220,8,109,109,169,48,91,213,164,249,107,187,6,84,133,251,60,144,28,33,103,170,135,201,24,136,57,189,167,5,55,8,10,170,49,10,85,50,116,104,65,73,69,63,161,209,140,142,95,57,41,182,15,6,118,24,185,135,36,87,103,59,136,193,32,57,24,136,203,241,39,13,242,115,33,120,233,203,211,184,132,147,131,230,41,136,212,57,20,154,39,177,206,40,153,52,101,141,109,...]}
+2018-01-10 00:25:50.858 [info] <0.635.0>@request_fsm:state_validate:115 Decoded torrent file as: {#{"announce" => "udp://tracker.coppersurfer.tk:6969/announce","announce-list" => [["udp://tracker.coppersurfer.tk:6969/announce"],["udp://tracker.ilibr.org:80/announce"],["udp://tracker.ilibr.org:6969/announce"],["udp://tracker.leechers-paradise.org:6969/announce"],["udp://eddie4.nl:6969/announce"],["udp://tracker.opentrackr.org:1337/announce"],["udp://tracker.zer0day.to:1337/announce"],["udp://9.rarbg.to:2750/announce"],["udp://p4p.arenabg.ch:1337/announce"],["udp://p4p.arenabg.com:1337/announce"],["udp://explodie.org:6969/announce"],["udp://ipv4.tracker.harry.lu:80/announce"],["udp://inferno.demonoid.pw:3393/announce"]],"created by" => "uTorrent/3.5.1","creation date" => 1515443364,"encoding" => "UTF-8","info" => #{"files" => [#{"length" => 618,"path" => ["free audiobook version.txt"]},#{"length" => 2364707,"path" => ["The Sleep Book_ How to Sleep Well Every Night by G. Meadows.epub"]}],"name" => "The Sleep Book_ How to Sleep Well Every Night by G. Meadows EPUB","piece length" => 16384,"pieces" => [106,229,90,58,173,132,230,189,107,18,134,134,101,130,107,222,235,30,77,150,120,72,196,186,29,39,96,208,165,85,55,104,185,196,152,111,236,87,191,129,129,181,148,168,107,39,93,212,208,30,180,158,80,236,139,14,92,234,5,114,175,173,104,99,238,67,160,22,87,113,35,239,237,42,216,87,231,200,252,136,4,142,214,89,47,243,122,81,167,161,89,143,238,87,7,154,163,195,2,226,115,236,43,134,103,143,95,238,40,240,198,163,218,81,203,215,198,82,150,235,252,207,97,109,134,84,85,89,182,9,30,44,118,16,163,87,59,225,249,191,27,195,200,244,225,98,82,200,63,133,187,183,169,127,158,171,1,54,178,14,50,169,50,130,120,19,30,54,139,30,171,64,19,38,77,165,52,233,119,187,147,124,226,39,215,138,87,173,161,167,86,18,238,164,240,27,170,100,230,18,109,18,172,68,158,33,105,200,81,25,56,64,197,32,2,152,255,49,56,151,194,88,155,81,144,246,11,121,98,27,239,89,148,83,25,60,76,163,190,207,125,226,133,107,116,128,111,155,143,78,141,251,123,83,96,105,8,82,32,210,135,33,110,10,99,105,119,194,144,36,150,6,234,143,236,190,171,37,123,228,23,244,143,137,82,102,47,150,168,186,87,43,246,104,1,211,62,29,69,19,211,217,248,192,161,168,134,119,236,104,9,30,142,204,141,106,10,153,196,231,21,163,185,38,193,140,197,248,50,154,187,93,141,74,103,247,31,164,109,175,112,124,72,125,96,68,188,82,80,190,133,172,229,46,52,201,111,182,136,246,107,96,231,122,236,68,254,64,86,128,169,134,21,243,145,244,207,240,93,63,126,243,12,21,163,202,76,253,99,93,231,46,252,115,121,171,194,113,113,40,237,25,34,234,156,80,211,152,222,96,46,0,62,63,43,104,47,54,159,67,223,2,25,11,233,200,21,80,64,72,238,239,61,82,202,19,73,250,127,25,52,147,17,9,141,187,200,126,16,162,60,200,246,94,237,178,144,198,225,109,2,71,146,169,247,149,106,141,73,220,3,64,169,58,168,96,158,235,117,74,13,35,13,170,190,176,244,15,80,104,156,193,29,110,84,60,0,1,178,119,171,191,152,238,9,132,253,234,158,54,86,173,243,212,128,127,34,223,133,250,35,240,34,125,69,179,118,110,107,126,17,135,186,147,124,31,120,61,140,212,52,250,9,157,11,212,138,99,197,206,164,205,29,186,146,91,78,202,89,134,40,222,54,234,222,154,111,83,100,209,49,209,36,213,7,79,62,187,63,31,190,178,108,73,127,130,105,206,169,40,175,3,133,127,130,229,77,206,19,65,30,187,39,122,136,21,68,104,12,74,13,187,188,226,35,19,223,244,194,16,235,27,219,71,172,22,189,52,27,138,195,252,107,172,48,125,183,28,195,23,202,157,175,87,83,109,200,59,19,132,51,117,2,74,110,201,147,239,55,49,74,114,152,172,163,114,239,198,80,171,30,65,41,238,112,152,236,4,153,90,82,241,48,145,157,0,228,154,252,75,162,170,192,34,20,191,163,14,93,186,141,39,38,88,45,140,92,224,56,225,119,201,115,0,178,207,154,163,233,167,11,205,157,233,106,63,148,71,130,248,45,24,181,40,149,37,39,76,72,185,225,109,218,176,51,11,209,203,156,196,231,74,184,16,148,162,45,220,131,230,98,172,35,104,190,175,152,229,140,189,84,224,136,212,8,101,102,215,149,227,232,250,212,77,204,174,121,92,229,255,114,150,17,48,225,127,186,210,172,76,229,41,106,191,28,100,211,23,107,165,157,217,192,207,178,89,70,178,107,199,150,202,110,113,194,210,95,67,190,69,40,47,26,21,183,180,183,219,106,118,66,...]}},...}
+2018-01-10 00:28:55.612 [info] <0.448.0> Application lager started on node 'torrer@127.0.0.1'
+2018-01-10 00:28:55.613 [info] <0.448.0> Application ranch started on node 'torrer@127.0.0.1'
+2018-01-10 00:28:55.613 [info] <0.448.0> Application gun started on node 'torrer@127.0.0.1'
+2018-01-10 00:28:55.613 [info] <0.587.0>@torrer_app:start:8 Starting torrer...
+2018-01-10 00:28:55.658 [info] <0.448.0> Application mnesia exited with reason: stopped
+2018-01-10 00:28:57.658 [info] <0.588.0>@torrer_sup:init:11 Starting torrer_sup...
+2018-01-10 00:28:57.658 [info] <0.589.0>@bootstrap_fsm:init:70 Starting bootstrap_fsm
+2018-01-10 00:28:57.658 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:115 Starting mnesia and setting up tables
+2018-01-10 00:28:57.658 [info] <0.588.0>@request_fsm_sup:start_link:36 in start_link of request_fsm_sup
+2018-01-10 00:28:57.658 [info] <0.590.0>@request_fsm_sup:init:72 Starting request_fsm_sup...
+2018-01-10 00:28:57.659 [info] <0.588.0>@request_listener:init:19 Starting request_listener...
+2018-01-10 00:28:57.660 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:116 {error,{'torrer@127.0.0.1',{already_exists,'torrer@127.0.0.1'}}}
+2018-01-10 00:28:57.746 [info] <0.448.0> Application mnesia started on node 'torrer@127.0.0.1'
+2018-01-10 00:28:57.747 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:118 {aborted,{already_exists,torrents}}
+2018-01-10 00:28:57.747 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:122 Done with mnesia bootstrap
+2018-01-10 00:28:57.747 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:127 Setting peer id...
+2018-01-10 00:28:57.747 [info] <0.589.0>@db_controller:get_and_update_peer_id:26 Restoring peer id "-TE0101-7bZAxt2AKBK5" from table
+2018-01-10 00:28:57.747 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:133 Restoring torrents...
+2018-01-10 00:28:57.747 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:139 Registering in gproc...
+2018-01-10 00:28:57.747 [info] <0.588.0>@request_listener:init:22 Bootstrap done with value undefined
+2018-01-10 00:28:57.747 [info] <0.589.0>@bootstrap_fsm:state_bootstrap:142 Now ready to operate...~n
+2018-01-10 00:29:02.648 [info] <0.635.0>@request_fsm:init:68 Starting request_fsm for "/home/saurav/Downloads/test3"
+2018-01-10 00:29:02.648 [info] <0.635.0>@request_fsm:init:70 Registered request "/home/saurav/Downloads/test3" in gproc
+2018-01-10 00:29:02.648 [error] <0.635.0>@request_fsm:state_validate:122 Error while reading torrent file "/home/saurav/Downloads/test3": enoent
+2018-01-10 00:29:02.648 [info] <0.635.0>@request_fsm:terminate:173 Terminating request for "/home/saurav/Downloads/test3" with Reason{shutdown,enoent}
+Unregistering from gproc
+2018-01-10 00:29:11.684 [info] <0.636.0>@request_fsm:init:68 Starting request_fsm for "/home/saurav/Downloads/test3.TORRENT"
+2018-01-10 00:29:11.684 [info] <0.636.0>@request_fsm:init:70 Registered request "/home/saurav/Downloads/test3.TORRENT" in gproc
+2018-01-10 00:29:11.684 [info] <0.636.0>@bencoding:decode_dict:40 Key in dict "announce"
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:42 Value for key: "udp://tracker.coppersurfer.tk:6969/announce"
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:40 Key in dict "announce-list"
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:42 Value for key: [["udp://tracker.coppersurfer.tk:6969/announce"],["udp://tracker.ilibr.org:80/announce"],["udp://tracker.ilibr.org:6969/announce"],["udp://tracker.leechers-paradise.org:6969/announce"],["udp://eddie4.nl:6969/announce"],["udp://tracker.opentrackr.org:1337/announce"],["udp://tracker.zer0day.to:1337/announce"],["udp://9.rarbg.to:2750/announce"],["udp://p4p.arenabg.ch:1337/announce"],["udp://p4p.arenabg.com:1337/announce"],["udp://explodie.org:6969/announce"],["udp://ipv4.tracker.harry.lu:80/announce"],["udp://inferno.demonoid.pw:3393/announce"]]
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:40 Key in dict "created by"
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:42 Value for key: "uTorrent/3.5.1"
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:40 Key in dict "creation date"
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_int:54 Index of e in int is 11
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_int:61 IntAsString is "1515443364"
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:42 Value for key: 1515443364
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:40 Key in dict "encoding"
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:42 Value for key: "UTF-8"
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:40 Key in dict "info"
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:40 Key in dict "files"
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:40 Key in dict "length"
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_int:54 Index of e in int is 4
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_int:61 IntAsString is "618"
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:42 Value for key: 618
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:40 Key in dict "path"
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:42 Value for key: ["free audiobook version.txt"]
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:40 Key in dict "length"
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_int:54 Index of e in int is 8
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_int:61 IntAsString is "2364707"
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:42 Value for key: 2364707
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:40 Key in dict "path"
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:42 Value for key: ["The Sleep Book_ How to Sleep Well Every Night by G. Meadows.epub"]
+2018-01-10 00:29:11.685 [info] <0.636.0>@bencoding:decode_dict:42 Value for key: [#{"length" => 618,"path" => ["free audiobook version.txt"]},#{"length" => 2364707,"path" => ["The Sleep Book_ How to Sleep Well Every Night by G. Meadows.epub"]}]
+2018-01-10 00:29:11.686 [info] <0.636.0>@bencoding:decode_dict:40 Key in dict "name"
+2018-01-10 00:29:11.686 [info] <0.636.0>@bencoding:decode_dict:42 Value for key: "The Sleep Book_ How to Sleep Well Every Night by G. Meadows EPUB"
+2018-01-10 00:29:11.686 [info] <0.636.0>@bencoding:decode_dict:40 Key in dict "piece length"
+2018-01-10 00:29:11.686 [info] <0.636.0>@bencoding:decode_int:54 Index of e in int is 6
+2018-01-10 00:29:11.686 [info] <0.636.0>@bencoding:decode_int:61 IntAsString is "16384"
+2018-01-10 00:29:11.686 [info] <0.636.0>@bencoding:decode_dict:42 Value for key: 16384
+2018-01-10 00:29:11.686 [info] <0.636.0>@bencoding:decode_dict:40 Key in dict "pieces"
+2018-01-10 00:29:11.687 [info] <0.636.0>@bencoding:decode_dict:42 Value for key: [106,229,90,58,173,132,230,189,107,18,134,134,101,130,107,222,235,30,77,150,120,72,196,186,29,39,96,208,165,85,55,104,185,196,152,111,236,87,191,129,129,181,148,168,107,39,93,212,208,30,180,158,80,236,139,14,92,234,5,114,175,173,104,99,238,67,160,22,87,113,35,239,237,42,216,87,231,200,252,136,4,142,214,89,47,243,122,81,167,161,89,143,238,87,7,154,163,195,2,226,115,236,43,134,103,143,95,238,40,240,198,163,218,81,203,215,198,82,150,235,252,207,97,109,134,84,85,89,182,9,30,44,118,16,163,87,59,225,249,191,27,195,200,244,225,98,82,200,63,133,187,183,169,127,158,171,1,54,178,14,50,169,50,130,120,19,30,54,139,30,171,64,19,38,77,165,52,233,119,187,147,124,226,39,215,138,87,173,161,167,86,18,238,164,240,27,170,100,230,18,109,18,172,68,158,33,105,200,81,25,56,64,197,32,2,152,255,49,56,151,194,88,155,81,144,246,11,121,98,27,239,89,148,83,25,60,76,163,190,207,125,226,133,107,116,128,111,155,143,78,141,251,123,83,96,105,8,82,32,210,135,33,110,10,99,105,119,194,144,36,150,6,234,143,236,190,171,37,123,228,23,244,143,137,82,102,47,150,168,186,87,43,246,104,1,211,62,29,69,19,211,217,248,192,161,168,134,119,236,104,9,30,142,204,141,106,10,153,196,231,21,163,185,38,193,140,197,248,50,154,187,93,141,74,103,247,31,164,109,175,112,124,72,125,96,68,188,82,80,190,133,172,229,46,52,201,111,182,136,246,107,96,231,122,236,68,254,64,86,128,169,134,21,243,145,244,207,240,93,63,126,243,12,21,163,202,76,253,99,93,231,46,252,115,121,171,194,113,113,40,237,25,34,234,156,80,211,152,222,96,46,0,62,63,43,104,47,54,159,67,223,2,25,11,233,200,21,80,64,72,238,239,61,82,202,19,73,250,127,25,52,147,17,9,141,187,200,126,16,162,60,200,246,94,237,178,144,198,225,109,2,71,146,169,247,149,106,141,73,220,3,64,169,58,168,96,158,235,117,74,13,35,13,170,190,176,244,15,80,104,156,193,29,110,84,60,0,1,178,119,171,191,152,238,9,132,253,234,158,54,86,173,243,212,128,127,34,223,133,250,35,240,34,125,69,179,118,110,107,126,17,135,186,147,124,31,120,61,140,212,52,250,9,157,11,212,138,99,197,206,164,205,29,186,146,91,78,202,89,134,40,222,54,234,222,154,111,83,100,209,49,209,36,213,7,79,62,187,63,31,190,178,108,73,127,130,105,206,169,40,175,3,133,127,130,229,77,206,19,65,30,187,39,122,136,21,68,104,12,74,13,187,188,226,35,19,223,244,194,16,235,27,219,71,172,22,189,52,27,138,195,252,107,172,48,125,183,28,195,23,202,157,175,87,83,109,200,59,19,132,51,117,2,74,110,201,147,239,55,49,74,114,152,172,163,114,239,198,80,171,30,65,41,238,112,152,236,4,153,90,82,241,48,145,157,0,228,154,252,75,162,170,192,34,20,191,163,14,93,186,141,39,38,88,45,140,92,224,56,225,119,201,115,0,178,207,154,163,233,167,11,205,157,233,106,63,148,71,130,248,45,24,181,40,149,37,39,76,72,185,225,109,218,176,51,11,209,203,156,196,231,74,184,16,148,162,45,220,131,230,98,172,35,104,190,175,152,229,140,189,84,224,136,212,8,101,102,215,149,227,232,250,212,77,204,174,121,92,229,255,114,150,17,48,225,127,186,210,172,76,229,41,106,191,28,100,211,23,107,165,157,217,192,207,178,89,70,178,107,199,150,202,110,113,194,210,95,67,190,69,40,47,26,21,183,180,183,219,106,118,66,195,155,25,178,152,212,139,214,125,54,183,24,91,7,34,71,214,155,132,215,51,2,25,49,13,221,40,195,133,33,137,27,76,14,111,50,208,70,64,81,151,116,108,135,158,30,170,37,80,243,117,109,148,136,131,153,120,115,38,248,214,153,40,98,74,51,228,143,139,214,239,211,33,248,18,71,93,57,153,31,94,50,12,50,14,55,244,64,168,78,157,59,112,113,92,201,4,143,145,33,168,205,109,228,159,150,61,139,62,233,194,61,138,9,220,8,109,109,169,48,91,213,164,249,107,187,6,84,133,251,60,144,28,33,103,170,135,201,24,136,57,189,167,5,55,8,10,170,49,10,85,50,116,104,65,73,69,63,161,209,140,142,95,57,41,182,15,6,118,24,185,135,36,87,103,59,136,193,32,57,24,136,203,241,39,13,242,115,33,120,233,203,211,184,132,147,131,230,41,136,212,57,20,154,39,177,206,40,153,52,101,141,109,45,114,70,177,40,199,183,54,120,184,208,81,31,117,150,113,49,229,187,8,45,25,171,112,147,122,81,46,255,85,54,137,236,228,11,148,205,37,151,161,174,84,142,47,20,209,250,174,78,97,164,6,90,59,205,251,180,62,152,221,160,24,146,225,240,85,83,72,132,64,95,122,78,117,249,35,166,169,98,218,98,152,...]
+2018-01-10 00:29:11.687 [info] <0.636.0>@bencoding:decode_dict:42 Value for key: #{"files" => [#{"length" => 618,"path" => ["free audiobook version.txt"]},#{"length" => 2364707,"path" => ["The Sleep Book_ How to Sleep Well Every Night by G. Meadows.epub"]}],"name" => "The Sleep Book_ How to Sleep Well Every Night by G. Meadows EPUB","piece length" => 16384,"pieces" => [106,229,90,58,173,132,230,189,107,18,134,134,101,130,107,222,235,30,77,150,120,72,196,186,29,39,96,208,165,85,55,104,185,196,152,111,236,87,191,129,129,181,148,168,107,39,93,212,208,30,180,158,80,236,139,14,92,234,5,114,175,173,104,99,238,67,160,22,87,113,35,239,237,42,216,87,231,200,252,136,4,142,214,89,47,243,122,81,167,161,89,143,238,87,7,154,163,195,2,226,115,236,43,134,103,143,95,238,40,240,198,163,218,81,203,215,198,82,150,235,252,207,97,109,134,84,85,89,182,9,30,44,118,16,163,87,59,225,249,191,27,195,200,244,225,98,82,200,63,133,187,183,169,127,158,171,1,54,178,14,50,169,50,130,120,19,30,54,139,30,171,64,19,38,77,165,52,233,119,187,147,124,226,39,215,138,87,173,161,167,86,18,238,164,240,27,170,100,230,18,109,18,172,68,158,33,105,200,81,25,56,64,197,32,2,152,255,49,56,151,194,88,155,81,144,246,11,121,98,27,239,89,148,83,25,60,76,163,190,207,125,226,133,107,116,128,111,155,143,78,141,251,123,83,96,105,8,82,32,210,135,33,110,10,99,105,119,194,144,36,150,6,234,143,236,190,171,37,123,228,23,244,143,137,82,102,47,150,168,186,87,43,246,104,1,211,62,29,69,19,211,217,248,192,161,168,134,119,236,104,9,30,142,204,141,106,10,153,196,231,21,163,185,38,193,140,197,248,50,154,187,93,141,74,103,247,31,164,109,175,112,124,72,125,96,68,188,82,80,190,133,172,229,46,52,201,111,182,136,246,107,96,231,122,236,68,254,64,86,128,169,134,21,243,145,244,207,240,93,63,126,243,12,21,163,202,76,253,99,93,231,46,252,115,121,171,194,113,113,40,237,25,34,234,156,80,211,152,222,96,46,0,62,63,43,104,47,54,159,67,223,2,25,11,233,200,21,80,64,72,238,239,61,82,202,19,73,250,127,25,52,147,17,9,141,187,200,126,16,162,60,200,246,94,237,178,144,198,225,109,2,71,146,169,247,149,106,141,73,220,3,64,169,58,168,96,158,235,117,74,13,35,13,170,190,176,244,15,80,104,156,193,29,110,84,60,0,1,178,119,171,191,152,238,9,132,253,234,158,54,86,173,243,212,128,127,34,223,133,250,35,240,34,125,69,179,118,110,107,126,17,135,186,147,124,31,120,61,140,212,52,250,9,157,11,212,138,99,197,206,164,205,29,186,146,91,78,202,89,134,40,222,54,234,222,154,111,83,100,209,49,209,36,213,7,79,62,187,63,31,190,178,108,73,127,130,105,206,169,40,175,3,133,127,130,229,77,206,19,65,30,187,39,122,136,21,68,104,12,74,13,187,188,226,35,19,223,244,194,16,235,27,219,71,172,22,189,52,27,138,195,252,107,172,48,125,183,28,195,23,202,157,175,87,83,109,200,59,19,132,51,117,2,74,110,201,147,239,55,49,74,114,152,172,163,114,239,198,80,171,30,65,41,238,112,152,236,4,153,90,82,241,48,145,157,0,228,154,252,75,162,170,192,34,20,191,163,14,93,186,141,39,38,88,45,140,92,224,56,225,119,201,115,0,178,207,154,163,233,167,11,205,157,233,106,63,148,71,130,248,45,24,181,40,149,37,39,76,72,185,225,109,218,176,51,11,209,203,156,196,231,74,184,16,148,162,45,220,131,230,98,172,35,104,190,175,152,229,140,189,84,224,136,212,8,101,102,215,149,227,232,250,212,77,204,174,121,92,229,255,114,150,17,48,225,127,186,210,172,76,229,41,106,191,28,100,211,23,107,165,157,217,192,207,178,89,70,178,107,199,150,202,110,113,194,210,95,67,190,69,40,47,26,21,183,180,183,219,106,118,66,195,155,25,178,152,212,139,214,125,54,183,24,91,7,34,71,214,155,132,215,51,2,25,49,13,221,40,195,133,33,137,27,76,14,111,50,208,70,64,81,151,116,108,135,158,30,170,37,80,243,117,109,148,136,131,153,120,115,38,248,214,153,40,98,74,51,228,143,139,214,239,211,33,248,18,71,93,57,153,31,94,50,12,50,14,55,244,64,168,78,157,59,112,113,92,201,4,143,145,33,168,205,109,228,159,150,61,139,62,233,194,61,138,9,220,8,109,109,169,48,91,213,164,249,107,187,6,84,133,251,60,144,28,33,103,170,135,201,24,136,57,189,167,5,55,8,10,170,49,10,85,50,116,104,65,73,69,63,161,209,140,142,95,57,41,182,15,6,118,24,185,135,36,87,103,59,136,193,32,57,24,136,203,241,39,13,242,115,33,120,233,203,211,184,132,147,131,230,41,136,212,57,20,154,39,177,206,40,153,52,101,141,109,...]}
+2018-01-10 00:29:11.688 [info] <0.636.0>@request_fsm:state_validate:115 Decoded torrent file as: {#{"announce" => "udp://tracker.coppersurfer.tk:6969/announce","announce-list" => [["udp://tracker.coppersurfer.tk:6969/announce"],["udp://tracker.ilibr.org:80/announce"],["udp://tracker.ilibr.org:6969/announce"],["udp://tracker.leechers-paradise.org:6969/announce"],["udp://eddie4.nl:6969/announce"],["udp://tracker.opentrackr.org:1337/announce"],["udp://tracker.zer0day.to:1337/announce"],["udp://9.rarbg.to:2750/announce"],["udp://p4p.arenabg.ch:1337/announce"],["udp://p4p.arenabg.com:1337/announce"],["udp://explodie.org:6969/announce"],["udp://ipv4.tracker.harry.lu:80/announce"],["udp://inferno.demonoid.pw:3393/announce"]],"created by" => "uTorrent/3.5.1","creation date" => 1515443364,"encoding" => "UTF-8","info" => #{"files" => [#{"length" => 618,"path" => ["free audiobook version.txt"]},#{"length" => 2364707,"path" => ["The Sleep Book_ How to Sleep Well Every Night by G. Meadows.epub"]}],"name" => "The Sleep Book_ How to Sleep Well Every Night by G. Meadows EPUB","piece length" => 16384,"pieces" => [106,229,90,58,173,132,230,189,107,18,134,134,101,130,107,222,235,30,77,150,120,72,196,186,29,39,96,208,165,85,55,104,185,196,152,111,236,87,191,129,129,181,148,168,107,39,93,212,208,30,180,158,80,236,139,14,92,234,5,114,175,173,104,99,238,67,160,22,87,113,35,239,237,42,216,87,231,200,252,136,4,142,214,89,47,243,122,81,167,161,89,143,238,87,7,154,163,195,2,226,115,236,43,134,103,143,95,238,40,240,198,163,218,81,203,215,198,82,150,235,252,207,97,109,134,84,85,89,182,9,30,44,118,16,163,87,59,225,249,191,27,195,200,244,225,98,82,200,63,133,187,183,169,127,158,171,1,54,178,14,50,169,50,130,120,19,30,54,139,30,171,64,19,38,77,165,52,233,119,187,147,124,226,39,215,138,87,173,161,167,86,18,238,164,240,27,170,100,230,18,109,18,172,68,158,33,105,200,81,25,56,64,197,32,2,152,255,49,56,151,194,88,155,81,144,246,11,121,98,27,239,89,148,83,25,60,76,163,190,207,125,226,133,107,116,128,111,155,143,78,141,251,123,83,96,105,8,82,32,210,135,33,110,10,99,105,119,194,144,36,150,6,234,143,236,190,171,37,123,228,23,244,143,137,82,102,47,150,168,186,87,43,246,104,1,211,62,29,69,19,211,217,248,192,161,168,134,119,236,104,9,30,142,204,141,106,10,153,196,231,21,163,185,38,193,140,197,248,50,154,187,93,141,74,103,247,31,164,109,175,112,124,72,125,96,68,188,82,80,190,133,172,229,46,52,201,111,182,136,246,107,96,231,122,236,68,254,64,86,128,169,134,21,243,145,244,207,240,93,63,126,243,12,21,163,202,76,253,99,93,231,46,252,115,121,171,194,113,113,40,237,25,34,234,156,80,211,152,222,96,46,0,62,63,43,104,47,54,159,67,223,2,25,11,233,200,21,80,64,72,238,239,61,82,202,19,73,250,127,25,52,147,17,9,141,187,200,126,16,162,60,200,246,94,237,178,144,198,225,109,2,71,146,169,247,149,106,141,73,220,3,64,169,58,168,96,158,235,117,74,13,35,13,170,190,176,244,15,80,104,156,193,29,110,84,60,0,1,178,119,171,191,152,238,9,132,253,234,158,54,86,173,243,212,128,127,34,223,133,250,35,240,34,125,69,179,118,110,107,126,17,135,186,147,124,31,120,61,140,212,52,250,9,157,11,212,138,99,197,206,164,205,29,186,146,91,78,202,89,134,40,222,54,234,222,154,111,83,100,209,49,209,36,213,7,79,62,187,63,31,190,178,108,73,127,130,105,206,169,40,175,3,133,127,130,229,77,206,19,65,30,187,39,122,136,21,68,104,12,74,13,187,188,226,35,19,223,244,194,16,235,27,219,71,172,22,189,52,27,138,195,252,107,172,48,125,183,28,195,23,202,157,175,87,83,109,200,59,19,132,51,117,2,74,110,201,147,239,55,49,74,114,152,172,163,114,239,198,80,171,30,65,41,238,112,152,236,4,153,90,82,241,48,145,157,0,228,154,252,75,162,170,192,34,20,191,163,14,93,186,141,39,38,88,45,140,92,224,56,225,119,201,115,0,178,207,154,163,233,167,11,205,157,233,106,63,148,71,130,248,45,24,181,40,149,37,39,76,72,185,225,109,218,176,51,11,209,203,156,196,231,74,184,16,148,162,45,220,131,230,98,172,35,104,190,175,152,229,140,189,84,224,136,212,8,101,102,215,149,227,232,250,212,77,204,174,121,92,229,255,114,150,17,48,225,127,186,210,172,76,229,41,106,191,28,100,211,23,107,165,157,217,192,207,178,89,70,178,107,199,150,202,110,113,194,210,95,67,190,69,40,47,26,21,183,180,183,219,106,118,66,...]}},...}

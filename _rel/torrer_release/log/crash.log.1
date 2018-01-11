@@ -1,0 +1,35 @@
+2018-01-07 03:24:33 =SUPERVISOR REPORT====
+     Supervisor: {local,torrer_sup}
+     Context:    child_terminated
+     Reason:     {{badmatch,{error,{no_exists,meta}}},[{bootstrap_fsm,state_bootstrap,3,[{file,"src/bootstrap_fsm.erl"},{line,127}]},{gen_statem,call_state_function,5,[{file,"gen_statem.erl"},{line,1240}]},{gen_statem,loop_event,6,[{file,"gen_statem.erl"},{line,1012}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+     Offender:   [{pid,<0.724.0>},{id,bootstrap_fsm},{mfargs,{bootstrap_fsm,start_link,[]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2018-01-07 15:15:39 =SUPERVISOR REPORT====
+     Supervisor: {local,torrer_sup}
+     Context:    child_terminated
+     Reason:     {{badmatch,{error,{no_exists,meta}}},[{bootstrap_fsm,state_bootstrap,3,[{file,"src/bootstrap_fsm.erl"},{line,127}]},{gen_statem,call_state_function,5,[{file,"gen_statem.erl"},{line,1240}]},{gen_statem,loop_event,6,[{file,"gen_statem.erl"},{line,1012}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+     Offender:   [{pid,<0.583.0>},{id,bootstrap_fsm},{mfargs,{bootstrap_fsm,start_link,[]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2018-01-07 15:16:29 =SUPERVISOR REPORT====
+     Supervisor: {local,torrer_sup}
+     Context:    child_terminated
+     Reason:     {{badmatch,{error,{no_exists,meta}}},[{bootstrap_fsm,state_bootstrap,3,[{file,"src/bootstrap_fsm.erl"},{line,127}]},{gen_statem,call_state_function,5,[{file,"gen_statem.erl"},{line,1240}]},{gen_statem,loop_event,6,[{file,"gen_statem.erl"},{line,1012}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+     Offender:   [{pid,<0.633.0>},{id,bootstrap_fsm},{mfargs,{bootstrap_fsm,start_link,[]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2018-01-07 15:20:29 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.556.0>
+    registered_name: []
+    exception exit: {{bad_return,{{torrer_app,start,[normal,[]]},{'EXIT',{undef,[{lager,info,["Starting torrer..."],[]},{torrer_app,start,2,[{file,"src/torrer_app.erl"},{line,8}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,273}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,134}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [<0.555.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.557.0>,normal}]
+    links: [<0.555.0>,<0.444.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 188
+  neighbours:
