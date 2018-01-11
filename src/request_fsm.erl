@@ -112,7 +112,7 @@ state_validate(internal, validate, #state{filename = FileName} = State) ->
     {ok, BinaryContents} ->
       case catch bencoding:decode(BinaryContents) of
         {ok, DecodedContents} ->
-          lager:info("Decoded torrent file as: ~p", [DecodedContents]),
+          lager:info("Decode torrent file as: ~p", [DecodedContents]),
           file:write_file("/home/saurav/test",DecodedContents),
           {next_state, state_validate, State#state{torrentdict = DecodedContents}, [{next_event, internal, check_downloaded}]};
         {'EXIT', Reason} ->
