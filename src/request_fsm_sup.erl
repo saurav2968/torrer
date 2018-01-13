@@ -40,8 +40,13 @@ new_request(FileName) ->
   Key = {n, l, "request:" ++ FileName},
   case gproc:where(Key) of
     undefined ->
-      supervisor:start_child(?SERVER, [FileName]),
-      ok;
+      lager:info("Starting new request_fsm child: ~p", [FileName]),
+      case supervisor:start_child(?SERVER, [FileName]) of
+        {ok, _Pid} -> ok;
+        E ->
+          lager:error("Failed to start request_fsm: ~p", [E]),
+          ok
+      end;
     Pid ->
       lager:info("Request for ~p already active with pid: ~p~n", [FileName, Pid]),
       {error, already_exists}
