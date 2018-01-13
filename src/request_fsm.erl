@@ -43,7 +43,8 @@
 %% @end
 %%--------------------------------------------------------------------
 start_link(Args) ->
-  gen_statem:start_link({local, ?SERVER}, ?MODULE, Args, []).
+  Name = list_to_atom(atom_to_list(?SERVER) ++ Args),
+  gen_statem:start_link({local, Name}, ?MODULE, Args, []).
 
 callback_mode() -> state_functions.
 
