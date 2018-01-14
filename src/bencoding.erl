@@ -10,8 +10,39 @@
 -author("saurav").
 -include_lib("stdlib/include/assert.hrl").
 %% API
--export([decode/1]).
+-export([
+  encode/1,
+  decode/1]).
 
+%%%%%%%%% encoding
+encode(Data) when is_integer(Data)->
+  encode_int(Data);
+encode(Data) when is_binary(Data) ->
+  encode_string(binary_to_list(Data));
+encode(Data) when is_list(Data) ->
+  encode_list(Data);
+encode(Data) when is_map(Data) ->
+  encode_map(Data);
+encode(_) -> {error, bad_data}.
+
+encode_int(Data)->
+  io:format("encode int: ~p~n",[Data]),
+  "i" ++ integer_to_list(Data) ++ "e".
+
+encode_string(Data) ->
+  io:format("encode string: ~p~n",[Data]),
+  integer_to_list(length(Data)) ++ ":" ++ Data.
+
+encode_list(Data) ->
+  io:format("encode list: ~p~n",[Data]),
+  "l" ++ lists:foldl(fun(E, Acc) -> Acc ++ encode(E) end, "", Data) ++ "e".
+
+encode_map(Data) ->
+  Keys = lists:map(fun(E) -> {E, unicode:characters_to_binary(E)}  end, maps:keys(Data)),
+  SortedKeys = lists:sort(Keys),
+  "d" ++ lists:foldl(fun({Unicode, _Binary}, Acc) -> Acc ++ encode(Unicode) ++ encode(maps:get(Unicode, Data)) end, "", SortedKeys) ++ "e".
+
+%%%%%%%%% decoding
 decode(Payload) when is_binary(Payload)->
   Payload2 = binary_to_list(Payload),
   decode(Payload2);
@@ -67,6 +98,7 @@ decode_int(Payload) ->
       end
   end.
 
+%% returns binary string
 decode_string(Payload) ->
   List = string:split(Payload, ":"),
   ?assert(length(List) > 1),
@@ -76,7 +108,7 @@ decode_string(Payload) ->
       lager:error("Didn't find int in ~p: ~p", [IntAsString, Reason]),
       error({bad_payload, int});
     Int ->
-      {string:sub_string(Payload2, 1, Int), string:sub_string(Payload2, Int + 1)}
+      {list_to_binary(string:sub_string(Payload2, 1, Int)), string:sub_string(Payload2, Int + 1)}
   end.
 
 %%%%%%%% string l(Payload) ->
