@@ -26,15 +26,15 @@ encode(Data) when is_map(Data) ->
 encode(_) -> {error, bad_data}.
 
 encode_int(Data)->
-  io:format("encode int: ~p~n",[Data]),
+  %io:format("encode int: ~p~n",[Data]),
   "i" ++ integer_to_list(Data) ++ "e".
 
 encode_string(Data) ->
-  io:format("encode string: ~p~n",[Data]),
+  %io:format("encode string: ~p~n",[Data]),
   integer_to_list(length(Data)) ++ ":" ++ Data.
 
 encode_list(Data) ->
-  io:format("encode list: ~p~n",[Data]),
+  %io:format("encode list: ~p~n",[Data]),
   "l" ++ lists:foldl(fun(E, Acc) -> Acc ++ encode(E) end, "", Data) ++ "e".
 
 encode_map(Data) ->
@@ -43,6 +43,7 @@ encode_map(Data) ->
   "d" ++ lists:foldl(fun({Unicode, _Binary}, Acc) -> Acc ++ encode(Unicode) ++ encode(maps:get(Unicode, Data)) end, "", SortedKeys) ++ "e".
 
 %%%%%%%%% decoding
+-spec decode(binary() | list()) -> {ok, {map(), list()}}.
 decode(Payload) when is_binary(Payload)->
   Payload2 = binary_to_list(Payload),
   decode(Payload2);
@@ -68,9 +69,9 @@ decode_dict([$e | T], Acc) ->
   {Acc, T};
 decode_dict(Payload, Acc) ->
   {Key, Payload2} = decode_string(Payload),
-  lager:info("Key in dict ~p",[Key]),
+  %lager:info("Key in dict ~p",[Key]),
   {Value, Payload3} = decode_value(Payload2),
-  lager:info("Value for key: ~p", [Value]),
+  %lager:info("Value for key: ~p", [Value]),
   Acc2 = maps:put(Key, Value, Acc),
   decode_dict(Payload3, Acc2).
 
@@ -82,14 +83,14 @@ decode_list(Payload, Acc) ->
 
 decode_int(Payload) ->
   Index = string:chr(Payload, $e),
-  lager:info("Index of e in int is ~p", [Index]),
+  %lager:info("Index of e in int is ~p", [Index]),
   case Index of
     0 ->
       lager:error("Bad payload- Unable to find trailing e for integer: ~p", [Payload]),
       error({bad_payload, int});
     _ ->
       IntAsString = string:sub_string(Payload, 1, Index -1),
-      lager:info("IntAsString is ~p", [IntAsString]),
+      %lager:info("IntAsString is ~p", [IntAsString]),
       case catch list_to_integer(IntAsString) of
         {'EXIT', Reason} ->
           lager:error("Didn't find int in ~p: ~p", [IntAsString, Reason]),
