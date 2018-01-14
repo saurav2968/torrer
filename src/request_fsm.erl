@@ -27,7 +27,7 @@
 
 -define(SERVER, ?MODULE).
 
--record(state, {filename, torrentdict}).
+-record(state, {filename, infohash, torrentdict}).
 
 %%%===================================================================
 %%% API
@@ -112,20 +112,27 @@ state_validate(internal, validate, #state{filename = FileName} = State) ->
   case file:read_file(FileName) of
     {ok, BinaryContents} ->
       case catch bencoding:decode(BinaryContents) of
-        {ok, DecodedContents} ->
-          lager:info("Decode torrent file as: ~p", [DecodedContents]),
-          file:write_file("/home/saurav/test",DecodedContents),
-          {next_state, state_validate, State#state{torrentdict = DecodedContents}, [{next_event, internal, check_downloaded}]};
+        {ok, {DecodedContents, _}} ->
+          lager:info("Decoded torrent file."),
+          %% get SHA1 HASh of info key and store in state
+          InfoHash = crypto:hash(sha, bencoding:encode(maps:get(<<"info">>, DecodedContents))),
+          lager:info("InfoHash ~p", [InfoHash]),
+          {next_state, state_validate, State#state{infohash = InfoHash, torrentdict = DecodedContents}, [{next_event, internal, check_downloaded}]};
         {'EXIT', Reason} ->
-          lager:error("Unable to decode torrent file ~p: ~p", [FileName, Reason])
+          lager:error("Unable to decode torrent file ~p: ~p", [FileName, Reason]),
+          {stop, {shutdown, Reason}}
       end;
     {error, Reason} ->
       lager:error("Error while reading torrent file ~p: ~p~n", [FileName, Reason]),
       {stop, {shutdown, Reason}}
   end;
 
-state_validate(internal, check_downloaded, #state{torrentdict = TorrentDict} = State) ->
+state_validate(internal, check_downloaded, #state{torrentdict = _TorrentDict} = State) ->
   %% ask mnesia torrents table if this is already dwnloaded by checking if there is entry and field is true
+%%  InfoHash =
+%%  case db_controller:check_downloaded() of
+%%
+%%  end,
   {next_state, state_validate, State};
 
 state_validate(_EventType, _EventContent, State) ->
