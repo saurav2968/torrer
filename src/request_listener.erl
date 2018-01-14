@@ -24,12 +24,18 @@ init() ->
   loop().
 
 loop() ->
-  {ok, [FileName]} = io:fread("Enter torrent file path> ", "~s"),
-  io:format("Processing torrent file: ~p~n", [FileName]),
-  %% User needs to press Enter to display prompt
-  request_fsm_sup:new_request(FileName),
-  io:get_line(""),
-  loop().
+  case io:fread("Enter torrent file path> ", "~s") of
+    {ok, [FileName]} ->
+      lager:info("Processing torrent file: ~p", [FileName]),
+      %% User needs to press Enter to display prompt
+      request_fsm_sup:new_request(FileName),
+      io:get_line(""),
+      loop();
+    eof ->
+      lager:info("User asked to abort!"),
+      init:stop(0)
+  end.
+
 
 
 
