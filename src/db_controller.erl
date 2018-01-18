@@ -12,10 +12,78 @@
 -include("../include/torrer.hrl").
 -define(META, meta).
 -define(TORRENTS, torrents).
--define(PEER_ID_PREFIX, "-TE0101-").
+-define(PEER_ID_PREFIX, "-TE1001-").
+-define(DEFAULT_REPEATS, 2).
 
 %% API
--export([get_and_update_peer_id/0, set_peer_id/1]).
+-export([
+  update_with_repeat/2,
+  update_with_repeat/3,
+  get_and_update_peer_id/0,
+  set_peer_id/1,
+  check_downloaded/1,
+  get_meta/1,
+  add_meta/2
+  ]).
+
+update_with_repeat(Fun, Args) ->
+  update_with_repeat(Fun, Args, ?DEFAULT_REPEATS).
+
+update_with_repeat(Fun, Args, 0) ->
+  lager:error("Max retries reached while calling Fun: ~p with Args: ~p", [Fun, Args]),
+  {error, max_reties};
+update_with_repeat(Fun, Args, Repeat) ->
+  case apply(Fun, Args) of
+    ok -> ok;
+    {ok, _} = R -> R;
+    {error, E} when is_list(E) -> update_with_repeat(Fun, Args, Repeat - 1);
+    {error, _}  = E -> E
+  end.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% All functions called via update with repeat should return
+% ok, {ok, Term}, {error, Term}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-spec get_meta(term()) -> term().
+get_meta(K) ->
+  Fun = fun() ->
+      mnesia:read({?META, K})
+    end,
+  case mnesia:transaction(Fun) of
+    {atomic, []} ->
+      lager:info("Key ~p not found in meta table",[K]),
+      {error, mnesia_key_not_found};
+    {atomic, [V]} -> {ok, V};
+    {aborted, Reason} ->
+      lager:info("Error while reading Key ~p from meta table: ~p", [K, Reason]),
+      {error, Reason}
+  end.
+
+-spec add_meta(term(), term()) -> ok | {error, term()}.
+add_meta(K, V) ->
+  Record = #meta{key = K, value = V},
+  Fun = fun() ->
+    mnesia:write(Record)
+  end,
+  case mnesia:transaction(Fun) of
+    {atomic, ok} -> ok;
+    {aborted, Reason} ->
+      lager:error("Aborted mnesia meta table updata for ~p with ~p:~n~p",[K, V, Reason]),
+      {error, Reason}
+  end.
+
+-spec check_downloaded(list()) -> {ok, true} | {ok, false} | {error, term()}.
+check_downloaded(InfoHash) ->
+  Fun = fun() ->
+      mnesia:read({?TORRENTS, InfoHash})
+    end,
+  case mnesia:transaction(Fun) of
+    {atomic, []} -> {ok, false};
+    {atomic, [Record]} -> {ok, true};
+    {aborted, Reason} ->
+      lager:error("Error while checking if torrent ~p is already downloaded: ~p", [InfoHash, Reason]),
+      {error, Reason}
+  end.
 
 -spec get_and_update_peer_id() -> {ok, list()} | {error, term()}.
 get_and_update_peer_id() ->

@@ -9,8 +9,10 @@ start_link() ->
 
 init([]) ->
 	lager:info("Starting torrer_sup..."),
+	lager:info("HELLLLO"),
 
 	SupFlags = #{strategy => one_for_one, intensity => 2, period => 5},
+
 	BootstrapFsmSpecs = #{id => bootstrap_fsm,
 												start => {bootstrap_fsm, start_link, []},
 												restart => permanent,
@@ -32,5 +34,13 @@ init([]) ->
 		type => supervisor,
 		modules => [request_fsm_sup]},
 
-	ChildSpecs = [BootstrapFsmSpecs, RequestFsmSupSpecs, RequestListenerSpecs],
+	TorrentSupSpecs = #{id => torrent_sup,
+		start => {torrent_sup, start_link, []},
+		restart => permanent,
+		shutdown => infinity,
+		type => supervisor,
+		modules => [torrent_sup]},
+%% RequestListenerSpecs should always be started at end
+	ChildSpecs = [BootstrapFsmSpecs, RequestFsmSupSpecs, TorrentSupSpecs, RequestListenerSpecs],
+
 	{ok, {SupFlags, ChildSpecs}}.

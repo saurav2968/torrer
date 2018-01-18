@@ -4,31 +4,35 @@
 %%% @doc
 %%%
 %%% @end
-%%% Created : 08. Jan 2018 12:15 AM
+%%% Created : 16. Jan 2018 9:23 PM
 %%%-------------------------------------------------------------------
--module(request_fsm).
+-module(tracker_udp_fsm).
 -author("saurav").
 
 -behaviour(gen_statem).
 
 %% API
--export([start_link/1]).
+-export([start_link/3]).
 
 %% gen_statem callbacks
 -export([
   init/1,
+  callback_mode/0,
   format_status/2,
-  state_validate/3,
-  state_wait/3,
+  state_connect/3,
+  state_bootstrap/3,
+  state_name/3,
   handle_event/4,
   terminate/3,
-  code_change/4,
-  callback_mode/0
+  code_change/4
 ]).
 
 -define(SERVER, ?MODULE).
+-define(PROTOCOL_ID, 16#41727101980). %% hex to decimal
+-define(CONNECT_SEQ, 0).
+-define(ANNOUNCE_SEQ, 1).
 
--record(state, {filename, infohash, torrentdict}).
+-record(state, {uri, infohash, torrentdict, socket, connection_id, connection_time}).
 
 %%%===================================================================
 %%% API
@@ -43,9 +47,9 @@
 %% @spec start_link() -> {ok, Pid} | ignore | {error, Error}
 %% @end
 %%--------------------------------------------------------------------
-start_link(Args) ->
-  Name = list_to_atom(atom_to_list(?SERVER) ++ Args),
-  gen_statem:start_link({local, Name}, ?MODULE, Args, []).
+start_link(InfoHash, TorrentDict, Uri) ->
+  Name = torrer_utils:get_uuid(),
+  gen_statem:start_link({local, Name}, ?MODULE, [InfoHash, TorrentDict, Uri], []).
 
 callback_mode() -> state_functions.
 
@@ -66,11 +70,12 @@ callback_mode() -> state_functions.
 %%                     {stop, StopReason}
 %% @end
 %%--------------------------------------------------------------------
-init(FileName) ->
-  lager:info("Starting request_fsm for ~p~n", [FileName]),
-  gproc:reg({n, l, "request:" ++ FileName}),
-  lager:info("Registered request ~p in gproc", [FileName]),
-  {ok, state_validate, #state{filename=FileName},[{next_event, internal, validate}]}.
+init([InfoHash, TorrentDict, Uri]) ->
+  lager:info("Starting tracker_udp_fsm for InfoHash: ~p, Uri: ~p",[InfoHash, Uri]),
+  gproc:reg({n, l,{?SERVER, InfoHash, Uri}}),
+  {ok, state_bootstrap, #state{infohash = InfoHash, uri = Uri, torrentdict = TorrentDict},
+    [{next_event, internal, ok}]}.
+
 
 %%--------------------------------------------------------------------
 %% @private
@@ -109,45 +114,19 @@ format_status(_Opt, [_PDict, _StateName, _State]) ->
 %%                   {keep_state_and_data, Actions}
 %% @end
 %%--------------------------------------------------------------------
-state_validate(internal, validate, #state{filename = FileName} = State) ->
-  case file:read_file(FileName) of
-    {ok, BinaryContents} ->
-      case catch bencoding:decode(BinaryContents) of
-        {ok, {DecodedContents, _}} ->
-          lager:info("Decoded torrent file."),
-          %% get SHA1 HASh of info key and store in state
-          InfoHash = binary_to_list(crypto:hash(sha, bencoding:encode(maps:get(<<"info">>, DecodedContents)))),
-          lager:info("InfoHash ~p", [InfoHash]),
-          {next_state, state_validate, State#state{infohash = InfoHash, torrentdict = DecodedContents}, [{next_event, internal, check_downloaded}]};
-        {'EXIT', Reason} ->
-          lager:error("Unable to decode torrent file ~p: ~p", [FileName, Reason]),
-          {stop, {shutdown, Reason}}
-      end;
-    {error, Reason} ->
-      lager:error("Error while reading torrent file ~p: ~p~n", [FileName, Reason]),
-      {stop, {shutdown, Reason}}
-  end;
+state_bootstrap(internal, ok, #state{uri = Uri} = State) ->
+  %% create a udp socket
+  {ok, Socket} = gen_udp:open(0, [binary, {active, once}]),
+  lager:info("Opened socket for ~p: ~p", [Uri, Socket]),
+  {next_state, state_connect, State#state{socket = Socket}, [{next_event, internal, ok}]}.
 
-state_validate(internal, check_downloaded, #state{filename = FileName, infohash = InfoHash, torrentdict = TorrentDict} = State) ->
-  %% ask mnesia torrents table if this is already dwnloaded by checking if there is entry and field is true
-  case db_controller:update_with_repeat(fun db_controller:check_downloaded/1, [InfoHash]) of
-    {ok, true} ->
-      lager:info("File ~p already downloaded", [FileName]),
-      {stop, {shutdown, already_downloaded}};
-    {error, Reason} -> {stop, {shutdown, Reason}};
-    {ok, false} ->
-      %% start child of torrent_sup
-      case torrent_sup:new_torrent(InfoHash, TorrentDict) of
-        {error, R} -> {stop, {shutdown, R}};
-        _ ->
-          %%%% meta table has decoded torrent dict
-          lager:info("Adding entry into meta table for InfoHash: ~p", [InfoHash]),
-          ok = db_controller:update_with_repeat(fun db_controller:add_meta/2, [InfoHash, TorrentDict]),
-          {next_state, state_wait, State}
-      end
-  end.
+state_connect(internal, ok, #state{socket = Socket, uri = Uri} = State) ->
+  lager:info("Connecting to Uri ~p", [Uri]),
+  TransactionId = random:uniform() * 2147483647, % 32 bit int
+  %%ok = gen_udp:send(Socket, Uri)
+  {next_state, state_name, State}.
 
-state_wait(_EventType, _EventContent, State) ->
+state_name(_EventType, _EventContent, State) ->
   NextStateName = next_state,
   {next_state, NextStateName, State}.
 
@@ -189,9 +168,9 @@ handle_event(_EventType, _EventContent, _StateName, State) ->
 %% @spec terminate(Reason, StateName, State) -> void()
 %% @end
 %%--------------------------------------------------------------------
-terminate(Reason, _StateName, #state{filename = FileName} = _State) ->
-  lager:info("Terminating request for ~p with Reason~p~nUnregistering from gproc", [FileName, Reason]),
-  catch gproc:unreg({n, l, "request:" ++ FileName}),
+terminate(_Reason, _StateName, #state{uri =Uri, socket = Socket}) ->
+  lager:info("Closing socket ~p for Uri ~p",[Socket, Uri]),
+  gen_udp:close(Socket),
   ok.
 
 %%--------------------------------------------------------------------

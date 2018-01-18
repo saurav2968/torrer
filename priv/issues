@@ -1,2 +1,4 @@
 We had an issue in call to mnesia:create_schema([node()]) as mnesia was already being specified as app dep in .app file.
 So we had to first shut it down and then call create_schema
+
+An issue with starting child of sup is when init is called with diff no of args(gen_statem expects 1 arg in init)
