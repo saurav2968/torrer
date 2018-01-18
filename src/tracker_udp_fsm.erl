@@ -32,7 +32,7 @@
 -define(CONNECT_SEQ, 0).
 -define(ANNOUNCE_SEQ, 1).
 
--record(state, {uri, infohash, torrentdict, socket, connection_id, connection_time}).
+-record(state, {host, port, infohash, torrentdict, socket, connection_id, connection_time}).
 
 %%%===================================================================
 %%% API
@@ -71,10 +71,15 @@ callback_mode() -> state_functions.
 %% @end
 %%--------------------------------------------------------------------
 init([InfoHash, TorrentDict, Uri]) ->
-  lager:info("Starting tracker_udp_fsm for InfoHash: ~p, Uri: ~p",[InfoHash, Uri]),
-  gproc:reg({n, l,{?SERVER, InfoHash, Uri}}),
-  {ok, state_bootstrap, #state{infohash = InfoHash, uri = Uri, torrentdict = TorrentDict},
-    [{next_event, internal, ok}]}.
+  case torrer_utils:get_host_and_port_from_uri(Uri) of
+    {error, Reason} ->
+      {stop, {shutdown, Reason}};
+    {Host, Port} ->
+      lager:info("Starting tracker_udp_fsm for InfoHash: ~p, Host: ~p",[InfoHash, {Host,Port}]),
+      gproc:reg({n, l,{?SERVER, InfoHash, {Host, Port}}}),
+      {ok, state_bootstrap, #state{infohash = InfoHash, host = Host, port = port, torrentdict = TorrentDict},
+        [{next_event, internal, ok}]}
+    end.
 
 
 %%--------------------------------------------------------------------
@@ -114,14 +119,14 @@ format_status(_Opt, [_PDict, _StateName, _State]) ->
 %%                   {keep_state_and_data, Actions}
 %% @end
 %%--------------------------------------------------------------------
-state_bootstrap(internal, ok, #state{uri = Uri} = State) ->
+state_bootstrap(internal, ok, #state{host = Host} = State) ->
   %% create a udp socket
   {ok, Socket} = gen_udp:open(0, [binary, {active, once}]),
-  lager:info("Opened socket for ~p: ~p", [Uri, Socket]),
+  lager:info("Opened socket for ~p: ~p", [Host, Socket]),
   {next_state, state_connect, State#state{socket = Socket}, [{next_event, internal, ok}]}.
 
-state_connect(internal, ok, #state{socket = Socket, uri = Uri} = State) ->
-  lager:info("Connecting to Uri ~p", [Uri]),
+state_connect(internal, ok, #state{socket = Socket, host = Host, port = Port} = State) ->
+  lager:info("Connecting to Host ~p", [{Host, Port}]),
   TransactionId = random:uniform() * 2147483647, % 32 bit int
   %%ok = gen_udp:send(Socket, Uri)
   {next_state, state_name, State}.
@@ -168,8 +173,8 @@ handle_event(_EventType, _EventContent, _StateName, State) ->
 %% @spec terminate(Reason, StateName, State) -> void()
 %% @end
 %%--------------------------------------------------------------------
-terminate(_Reason, _StateName, #state{uri =Uri, socket = Socket}) ->
-  lager:info("Closing socket ~p for Uri ~p",[Socket, Uri]),
+terminate(_Reason, _StateName, #state{host =Host, socket = Socket}) ->
+  lager:info("Closing socket ~p for Uri ~p",[Socket, Host]),
   gen_udp:close(Socket),
   ok.
 
