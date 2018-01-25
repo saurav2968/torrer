@@ -8,7 +8,7 @@ start_link() ->
 	supervisor:start_link({local, ?MODULE}, ?MODULE, []).
 
 init([]) ->
-	lager:info("Starting torrer_sup..."),
+	lager:info("~p | Starting torrer_sup...",[self()]),
 	lager:info("HELLLLO"),
 
 	SupFlags = #{strategy => one_for_one, intensity => 2, period => 5},

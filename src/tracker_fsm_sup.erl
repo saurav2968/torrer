@@ -58,13 +58,10 @@ start_link(InfoHash, TorrentDict) ->
   {error, Reason :: term()}).
 init([InfoHash, TorrentDict]) ->
   %% 2 child type possible. all started by tacker_fsm
-  lager:info("Starting tracker_fsm_sup for InfoHash: ~p", [InfoHash]),
+  lager:info("~p | Starting tracker_fsm_sup for InfoHash: ~p", [self(), InfoHash]),
   gproc:reg({n,l, {?SERVER, InfoHash}}),
-  RestartStrategy = one_for_one,
-  MaxRestarts = 1000,
-  MaxSecondsBetweenRestarts = 3600,
+  SupFlags = #{strategy => one_for_one, intensity => 20, period => 1},
 
-  SupFlags = {RestartStrategy, MaxRestarts, MaxSecondsBetweenRestarts},
   %% iterate through trackers list and start child
   UdpTrackerUrls = torrent_file:get_trackers(TorrentDict, udp),
   HttpTrackerUrls = torrent_file:get_trackers(TorrentDict, http),
