@@ -12,7 +12,9 @@
 %% API
 -export([
   encode/1,
-  decode/1]).
+  decode/1,
+  decode_file/1
+  ]).
 
 %%%%%%%%% encoding
 encode(Data) when is_integer(Data)->
@@ -43,6 +45,10 @@ encode_map(Data) ->
   "d" ++ lists:foldl(fun({Unicode, _Binary}, Acc) -> Acc ++ encode(Unicode) ++ encode(maps:get(Unicode, Data)) end, "", SortedKeys) ++ "e".
 
 %%%%%%%%% decoding
+decode_file(FileName) ->
+  {ok, Bin} = file:read_file(FileName),
+  decode(Bin).
+
 -spec decode(binary() | list()) -> {ok, {map(), list()}}.
 decode(Payload) when is_binary(Payload)->
   Payload2 = binary_to_list(Payload),
@@ -53,7 +59,7 @@ decode(Payload) when is_list(Payload) ->
     [$d | T] ->
       {ok, decode_dict(T, #{})};
     [In | _] ->
-      lager:error("Bad starting index ~p in torrent file", [In]),
+      %lager:error("Bad starting index ~p in torrent file", [In]),
       error(bad_torrent)
   end.
 
@@ -86,14 +92,14 @@ decode_int(Payload) ->
   %lager:info("Index of e in int is ~p", [Index]),
   case Index of
     0 ->
-      lager:error("Bad payload- Unable to find trailing e for integer: ~p", [Payload]),
+      %lager:error("Bad payload- Unable to find trailing e for integer: ~p", [Payload]),
       error({bad_payload, int});
     _ ->
       IntAsString = string:sub_string(Payload, 1, Index -1),
       %lager:info("IntAsString is ~p", [IntAsString]),
       case catch list_to_integer(IntAsString) of
         {'EXIT', Reason} ->
-          lager:error("Didn't find int in ~p: ~p", [IntAsString, Reason]),
+       %   lager:error("Didn't find int in ~p: ~p", [IntAsString, Reason]),
           error({bad_payload, int});
         Int -> {Int, string:sub_string(Payload, Index + 1)}
       end
@@ -106,7 +112,7 @@ decode_string(Payload) ->
   [IntAsString, Payload2] = List,
   case catch list_to_integer(IntAsString) of
     {'EXIT', Reason} ->
-      lager:error("Didn't find int in ~p: ~p", [IntAsString, Reason]),
+      %lager:error("Didn't find int in ~p: ~p", [IntAsString, Reason]),
       error({bad_payload, int});
     Int ->
       {list_to_binary(string:sub_string(Payload2, 1, Int)), string:sub_string(Payload2, Int + 1)}

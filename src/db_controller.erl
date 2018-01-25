@@ -23,7 +23,9 @@
   set_peer_id/1,
   check_downloaded/1,
   get_meta/1,
-  add_meta/2
+  add_meta/2,
+  add_torrent/1,
+  get_torrent/1
   ]).
 
 update_with_repeat(Fun, Args) ->
@@ -72,6 +74,29 @@ add_meta(K, V) ->
       {error, Reason}
   end.
 
+get_torrent(InfoHash) ->
+  Fun = fun() ->
+    mnesia:read({?TORRENTS, InfoHash})
+        end,
+  case mnesia:transaction(Fun) of
+    {atomic, []} -> {error, torrent_not_found};
+    {atomic, [Record]} -> {ok, Record};
+    {aborted, Reason} ->
+      lager:error("Error while checking if torrent ~p is already downloaded: ~p", [InfoHash, Reason]),
+      {error, Reason}
+  end.
+
+add_torrent(Torrent) ->
+  Fun = fun() ->
+    mnesia:write(Torrent)
+  end,
+  case mnesia:transaction(Fun) of
+    {atomic, ok} -> ok;
+    {aborted, Reason} ->
+      lager:error("Error while adding torrent record ~p to torrent table: ~p", [Torrent, Reason]),
+      {error, Reason}
+  end.
+
 -spec check_downloaded(list()) -> {ok, true} | {ok, false} | {error, term()}.
 check_downloaded(InfoHash) ->
   Fun = fun() ->
@@ -79,7 +104,7 @@ check_downloaded(InfoHash) ->
     end,
   case mnesia:transaction(Fun) of
     {atomic, []} -> {ok, false};
-    {atomic, [Record]} -> {ok, true};
+    {atomic, [Record]} -> {ok, Record#torrents.done};
     {aborted, Reason} ->
       lager:error("Error while checking if torrent ~p is already downloaded: ~p", [InfoHash, Reason]),
       {error, Reason}

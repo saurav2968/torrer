@@ -29,12 +29,16 @@ loop() ->
       lager:info("Processing torrent file: ~p", [FileName]),
       %% User needs to press Enter to display prompt
       request_fsm_sup:new_request(FileName),
-      io:get_line(""),
-      loop();
+      %io:get_line(""),
+      loop2();
     eof ->
       lager:info("User asked to abort!"),
       init:stop(0)
   end.
+
+loop2() ->
+  timer:sleep(10000),
+  loop2().
 
 
 

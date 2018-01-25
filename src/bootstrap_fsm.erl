@@ -112,7 +112,7 @@ format_status(_Opt, [_PDict, _StateName, _State]) ->
 %%--------------------------------------------------------------------
 state_bootstrap(internal, mnesia_start, State) ->
   %% Start mnesia, setup tables
-  lager:info("Starting mnesia and setting up tables"),
+  lager:info("~p | Starting mnesia and setting up tables",[self()]),
   lager:info("~p~n", [mnesia:create_schema([node()])]), % create a schema table on local disk, returns error if schema already there
   mnesia:start(),
   lager:info("~p", [mnesia:create_table(torrents, [{disc_copies, [node()]},{attributes, record_info(fields, torrents)}])]),
