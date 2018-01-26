@@ -20,12 +20,12 @@ init([]) ->
 												type => worker,
 												modules => [bootstrap_fsm]},
 
-	RequestListenerSpecs = #{id => request_listener,
-		start => {request_listener, start_link, []},
-		restart => permanent,
-		shutdown => 2000,
-		type => worker,
-		modules => [request_listener]},
+%%	RequestListenerSpecs = #{id => request_listener,
+%%		start => {request_listener, start_link, []},
+%%		restart => permanent,
+%%		shutdown => 2000,
+%%		type => worker,
+%%		modules => [request_listener]},
 
 	RequestFsmSupSpecs = #{id => request_fsm_sup,
 		start => {request_fsm_sup, start_link, []},
@@ -41,6 +41,6 @@ init([]) ->
 		type => supervisor,
 		modules => [torrent_sup]},
 %% RequestListenerSpecs should always be started at end
-	ChildSpecs = [BootstrapFsmSpecs, RequestFsmSupSpecs, TorrentSupSpecs, RequestListenerSpecs],
+	ChildSpecs = [BootstrapFsmSpecs, RequestFsmSupSpecs, TorrentSupSpecs],
 
 	{ok, {SupFlags, ChildSpecs}}.

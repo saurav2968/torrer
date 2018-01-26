@@ -4,20 +4,31 @@
 -export([start/2]).
 -export([stop/1]).
 
-start(_Type, _Args) ->
-	lager:info("Starting torrer..."),
-	%% Below is a hack for now
-	application:ensure_started(lager),
-	application:ensure_started(gproc),
-	application:ensure_started(gun),
-	application:ensure_started(crypto),
-	application:ensure_started(mnesia),
+stop_mnesia() ->
 	case mnesia:system_info(is_running) of
 		yes ->
 			application:stop(mnesia),
-			timer:sleep(2000);
+			timer:sleep(100),
+			stop_mnesia();
 		_ -> ok
-	end,
+	end.
+
+start(_Type, _Args) ->
+	lager:info("Starting torrer..."),
+	Rules = [{'_', [{"/", torrer_web, []},
+						%% js files
+					 {"/priv/js/[...]", cowboy_static, {priv_dir, torrer, "js/"}},
+						%% rest endpoint
+					 {"/rest/new", torrer_rest, []}
+		]}],
+
+	Dispatch = cowboy_router:compile(Rules),
+	{ok, _} = cowboy:start_http(product_http, 5, [{port, 8080}],
+		[{env, [{dispatch, Dispatch}]}]),
+	lager:info("Started cowboy server on 8080."),
+
+	%% Below is a hack for now
+	stop_mnesia(),
 	torrer_sup:start_link().
 
 stop(_State) ->

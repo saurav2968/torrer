@@ -65,14 +65,22 @@ init([InfoHash, TorrentDict]) ->
 
   SupFlags = {RestartStrategy, MaxRestarts, MaxSecondsBetweenRestarts},
 
-  TrackerFsmSupSpecs = #{id => tracker_fsm_sup,
+  TrackerFsmSupSpec = #{id => list_to_atom(atom_to_list(tracker_fsm_sup) ++ InfoHash),
     start => {tracker_fsm_sup, start_link, [InfoHash, TorrentDict]},
     restart => permanent,
     shutdown => infinity,
     type => supervisor,
     modules => [tracker_fsm_sup]},
 
-  ChildSpecs = [TrackerFsmSupSpecs],
+  TorrentServerSpec = #{id => list_to_atom(atom_to_list(torrent_server) ++ InfoHash),
+    start => {torrent_server, start_link, [InfoHash, TorrentDict]},
+    restart => permanent,
+    shutdown => 2000,
+    type => worker,
+    modules => [torrent_server]},
+
+
+  ChildSpecs = [TrackerFsmSupSpec, TorrentServerSpec],
   {ok, {SupFlags, ChildSpecs}}.
 
 %%%===================================================================

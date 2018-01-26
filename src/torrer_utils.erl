@@ -15,7 +15,9 @@
   get_uuid/0,
   get_host_and_port_from_uri/1,
   get_torrent_record/2,
-  get_infohash/1
+  get_infohash/1,
+  parse_peers/1,
+  lookup_process/1
 ]).
 
 is_single_file(TorrentDict) ->
@@ -111,3 +113,11 @@ get_infohash(Payload) ->
 %%      || <<N:4>> <= crypto:hash(sha, Payload) >>.
 %%  %io_lib:format("<<~s>>~n", [[io_lib:format("~2.16.0B",[X]) || <<X:8>> <= crypto:hash(sha, Payload) ]]).
 
+parse_peers(IpAndPort) ->
+  [ {Ip, Port} || <<Ip:32, Port:16>> <= IpAndPort].
+
+lookup_process(Key) ->
+  case gproc:where(Key) of
+    undefined -> error(Key);
+    Pid when is_pid(Pid) -> Pid
+  end.

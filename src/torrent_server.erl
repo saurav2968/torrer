@@ -12,7 +12,10 @@
 -behaviour(gen_server).
 
 %% API
--export([start_link/0]).
+-export([
+  start_link/2,
+  add_peers/3
+  ]).
 
 %% gen_server callbacks
 -export([init/1,
@@ -24,11 +27,16 @@
 
 -define(SERVER, ?MODULE).
 
--record(state, {}).
+-record(state, {infohash, torrentdict}).
 
 %%%===================================================================
 %%% API
 %%%===================================================================
+add_peers(InfoHash, Tracker, Peers) ->
+  lager:info("SERVER macro: ~p", [?SERVER]),
+  Pid = torrer_utils:lookup_process({n, l, {?SERVER, InfoHash}}),
+  lager:info("Adding peers"),
+  gen_server:call(Pid, {peer_info, {Tracker, Peers}}).
 
 %%--------------------------------------------------------------------
 %% @doc
@@ -36,10 +44,9 @@
 %%
 %% @end
 %%--------------------------------------------------------------------
--spec(start_link() ->
-  {ok, Pid :: pid()} | ignore | {error, Reason :: term()}).
-start_link() ->
-  gen_server:start_link({local, ?SERVER}, ?MODULE, [], []).
+start_link(InfoHash, TorrentDict) ->
+  Name = torrer_utils:get_uuid(),
+  gen_server:start_link({local, Name}, ?MODULE, [InfoHash, TorrentDict], []).
 
 %%%===================================================================
 %%% gen_server callbacks
@@ -59,8 +66,11 @@ start_link() ->
 -spec(init(Args :: term()) ->
   {ok, State :: #state{}} | {ok, State :: #state{}, timeout() | hibernate} |
   {stop, Reason :: term()} | ignore).
-init([]) ->
-  {ok, #state{}}.
+init([InfoHash, TorrentDict]) ->
+  %% gproc:await({n, l, {torrer_peer_fsm, InfoHash}}),
+  gproc:reg({n, l, {?SERVER, InfoHash}}),
+  lager:info("Torrent server is ready now...: ~p",[self()]),
+  {ok, #state{infohash = InfoHash, torrentdict = TorrentDict}}.
 
 %%--------------------------------------------------------------------
 %% @private
@@ -77,9 +87,13 @@ init([]) ->
   {noreply, NewState :: #state{}, timeout() | hibernate} |
   {stop, Reason :: term(), Reply :: term(), NewState :: #state{}} |
   {stop, Reason :: term(), NewState :: #state{}}).
-handle_call(_Request, _From, State) ->
-  {reply, ok, State}.
+handle_call({peer_info, {Tracker, Peers}}, _From, State) ->
+  lager:info("Got peers list: ~p from: ~p", [Peers, Tracker]),
+  {reply, ok, State};
 
+handle_call(Req, _, State) ->
+  lager:info("Bogus request: ~p", [Req]),
+  {reply, ok, State}.
 %%--------------------------------------------------------------------
 %% @private
 %% @doc

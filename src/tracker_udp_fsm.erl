@@ -120,7 +120,7 @@ state_announce(internal, announce, #state{host=Host, port=Port, connection_id = 
         InfoHashBin/binary,
         PeerIdBin/binary,
         Dw:64, Left:64, Uploaded:64,
-        0:32, 0:32, 0:32, -1:32, 6612:16 >>,
+        0:32, 0:32, 0:32, 2:32, 6612:16 >>,
       lager:info("Sending announce to tracker: ~p",[Payload]),
       ok = gen_udp:send(Socket, Host, Port, Payload),
       {next_state, state_announcing, State#state{transaction_id = TransactionId, action=?ANNOUNCE_SEQ },
@@ -130,11 +130,17 @@ state_announce(internal, announce, #state{host=Host, port=Port, connection_id = 
 state_announcing(timeout, _, #state{host=Host, action=Action} = _State) ->
   lager:info("Didn't receive reply from tracker: ~p for actiion ~p in state_announcing.Restarting...",[Host, Action]),
   {stop, tracker_timeout};
-state_announcing(info, {udp, _,  _, _, Msg}, #state{host=Host, action = Action, transaction_id = TransactionId} = State) ->
+state_announcing(info, {udp, _,  _, _, Msg}, #state{host=Host, action = Action, transaction_id = TransactionId, infohash = InfoHash} = State) ->
   lager:info("Received valid msg from tracker in state_announcing"),
+  %% Validate response and notify peers to torrent_server
 %%  16 = byte_size(Msg),
 %%  <<Action:32, TransactionId:32, ConnectionId:64>> = Msg,
 %%  lager:info("Received connection id ~p for ~p",[ConnectionId, Host]),
+   << ?ANNOUNCE_SEQ:32, TransactionId:32, AnnounceInterval:32, Leechers:32, Seeders:32, IpAndPort/binary>> = Msg,
+   lager:info("Seeders: ~p, Leechers: ~p, AnnounceInterval: ~p",[Seeders, Leechers, AnnounceInterval]),
+   Peers = torrer_utils:parse_peers(IpAndPort),
+   torrent_server:add_peers(InfoHash, Host, Peers),
+   %% request peprs again
    {next_state, state_announcing, State};
 
 state_announcing(info, Msg, #state{host=Host, action=Action} = State) ->
